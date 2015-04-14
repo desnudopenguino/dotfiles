@@ -1,10 +1,14 @@
 " Turn syntax on
 syntax on
 
+" set the color scheme
 try
 	color distinguished
 catch
 endtry
+
+" indent lines based on filetype
+filetype plugin indent on
 
 set ffs=unix,dos,mac
 

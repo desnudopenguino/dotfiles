@@ -39,3 +39,16 @@ noremap <left> <nop>
 noremap <up> <nop>
 noremap <right> <nop>
 noremap <down> <nop>
+
+set nobackup
+set nowritebackup
+set shiftwidth=2
+
+filetype plugin on
+au FileType php,html,ctp setl ofu=phpcomplete#CompletePHP
+au FileType ruby,eruby setl ofu=rubycomplete#Complete
+au FileType html,ctp setl ofu=complete#CompleteTags
+au FileType c setl ofu=ccomplete#CompleteCpp
+au FileType css setl ofu=csscomplete#CompleteCSS
+
+set autoindent

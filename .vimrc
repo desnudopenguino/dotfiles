@@ -20,10 +20,6 @@ filetype plugin indent on    " required
 "filetype plugin on
 "
 
-" NERDTree arrows not worknig
-let NERDTREEDirArrows=0
-
-
 " Turn syntax on
 syntax on
 
@@ -39,7 +35,8 @@ filetype plugin indent on
 
 set ffs=unix,dos,mac
 
-" set the line numbers
+" set relative number with actual line number (hybrid numbers) 
+set relativenumber
 set number
 
 " Set tabs to 2 spaces
@@ -78,8 +75,11 @@ au FileType html,ctp setl ofu=complete#CompleteTags
 au FileType c setl ofu=ccomplete#CompleteCpp
 au FileType css setl ofu=csscomplete#CompleteCSS
 
+" Auto indents the next line
 set autoindent
 
+" saves the <SHIFT> keypress
 map ; :
 
+" fold on indenting, faster file navigation maybe?
 set foldmethod=indent

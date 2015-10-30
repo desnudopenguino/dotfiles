@@ -84,3 +84,9 @@ set foldmethod=indent
 
 " use ; instead of :, one less keystroke needed!
 map ; :
+
+" commands for CtrlP
+if !empty(glob(".vim/bundle/ctrlp.vim"))
+	let g:ctrlp_map = '<c-p>'
+	let g:ctrlp_cmd = 'CtrlP'
+endif

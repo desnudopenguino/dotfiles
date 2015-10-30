@@ -30,9 +30,6 @@ else
 	color slate
 endif
 
-" indent lines based on filetype
-filetype plugin indent on
-
 set ffs=unix,dos,mac
 
 " set relative number with actual line number (hybrid numbers) 
@@ -41,6 +38,7 @@ set number
 
 " Set tabs to 2 spaces
 set tabstop=2
+set shiftwidth=2
 
 " auto read when a file is changed from outside
 set autoread
@@ -64,9 +62,9 @@ noremap <up> <nop>
 noremap <right> <nop>
 noremap <down> <nop>
 
+" Don't write back-up files
 set nobackup
 set nowritebackup
-set shiftwidth=2
 
 filetype plugin on
 au FileType php,html,ctp setl ofu=phpcomplete#CompletePHP

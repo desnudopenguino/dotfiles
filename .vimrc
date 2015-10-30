@@ -1,11 +1,38 @@
+set nocp
+" Vundle goodness
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'tpope/vim-fugitive'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+"
+
+" NERDTree arrows not worknig
+let NERDTREEDirArrows=0
+
+
 " Turn syntax on
 syntax on
 
 " set the color scheme
-try
+if &term =~ "xterm-256color"
 	color distinguished
-catch
-endtry
+else
+	color slate
+endif
 
 " indent lines based on filetype
 filetype plugin indent on
@@ -52,3 +79,7 @@ au FileType c setl ofu=ccomplete#CompleteCpp
 au FileType css setl ofu=csscomplete#CompleteCSS
 
 set autoindent
+
+map ; :
+
+set foldmethod=indent

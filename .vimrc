@@ -78,8 +78,8 @@ au FileType css setl ofu=csscomplete#CompleteCSS
 " Auto indents the next line
 set autoindent
 
-" saves the <SHIFT> keypress
-map ; :
-
 " fold on indenting, faster file navigation maybe?
 set foldmethod=indent
+
+" use ; instead of :, one less keystroke needed!
+map ; :

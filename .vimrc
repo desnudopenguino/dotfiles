@@ -19,7 +19,6 @@ call vundle#end()            " required
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
-"
 
 " Turn syntax on
 syntax on
@@ -92,4 +91,5 @@ if !empty(glob(".vim/bundle/ctrlp.vim"))
 endif
 
 " show tabs, nbsp, and tabs
-set listchars=tab:>~,nbsp:_,trail:.
+exec "set listchars=tab:\uBB\uBB,trail:\uB7"
+set list

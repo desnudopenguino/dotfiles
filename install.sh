@@ -9,3 +9,5 @@ ln -sf `pwd`/.vim ~/.vim
 
 # soft link tmux config (.tmux.conf)
 ln -sf `pwd`/.tmux.conf ~/.tmux.conf
+
+ln -sf `pwd`/.Xdefaults ~/.Xdefaults

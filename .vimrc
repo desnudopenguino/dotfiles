@@ -25,7 +25,7 @@ filetype plugin indent on    " required
 syntax on
 
 " set the color scheme
-if &term =~ "xterm-256color"
+if &term =~ "xterm-256color" || &term =~ "rxvt-unicode-256color"
 	color distinguished
 else
 	color slate

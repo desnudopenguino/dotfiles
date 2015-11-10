@@ -1,17 +1,18 @@
 ! $OpenBSD: dot.Xdefaults,v 1.3 2014/07/10 10:22:59 jasper Exp $
 XTerm*loginShell:true
+XTerm*termName: xterm-256color
 
 ! urxvw settings
 urxvt*loginShell: true
-urxvt.termName: rxvt-unicode-256color
-urxvt.scrollBar: false
-urxvt.background: black
-urxvt.foreground: gray
-urxvt.saveLines: 100000
+*rxvt*termName: rxvt-unicode-256color
+urxvt*scrollBar: false
+urxvt*background: black
+urxvt*foreground: gray
+urxvt*saveLines: 100000
 !urxvt.borderLess: true
-urxvt.internalBorder: 0
-urxvt.externalBorder: 0
+urxvt*internalBorder: 0
+urxvt*externalBorder: 0
 
 ! transparency
-urxvt*.transparent: true
-urxvt*.shading: 20 
+urxvt*transparent: true
+urxvt*shading: 20 

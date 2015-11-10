@@ -89,6 +89,9 @@ if !empty(glob(".vim/bundle/ctrlp.vim"))
 	let g:ctrlp_cmd = 'CtrlP'
 endif
 
+" highlight current cursor line
+set cursorline
+
 " show tabs, nbsp, and tabs
 exec "set listchars=tab:\uBB\uBB,trail:\uB7"
 set list

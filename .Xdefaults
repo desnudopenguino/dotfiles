@@ -14,4 +14,4 @@ urxvt.externalBorder: 0
 
 ! transparency
 urxvt*.transparent: true
-urxvt*.shading: 50 
+urxvt*.shading: 20 

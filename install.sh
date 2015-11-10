@@ -14,3 +14,6 @@ ln -sf `pwd`/.tmux.conf ~/.tmux.conf
 ln -sf `pwd`/.tmux ~/.tmux
 
 ln -sf `pwd`/.Xdefaults ~/.Xdefaults
+
+# download the submodules
+git submodule update --init

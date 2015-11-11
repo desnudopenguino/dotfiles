@@ -11,4 +11,13 @@ Step 2. Run the install script
 
 cd dotfiles && ./install.sh
 
+Step 3. Update the Vim bundled plugins
+
+vi(m) :PluginInstall
+
+Step 4. Update the TMUX plugins
+
+tmux source ~/.tmux.conf
+(inside TMUX) prefix + I (capital i, I)
+
 NOTE: Make sure you have a full color term if you are planning on using 256-color stuff!

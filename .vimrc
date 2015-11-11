@@ -27,8 +27,6 @@ syntax on
 " set the color scheme
 if &term =~ "xterm-256color" || &term =~ "rxvt-unicode-256color" || &term =~ "screen-256color"
 	color distinguished
-else
-	color slate
 endif
 
 set ffs=unix,dos,mac

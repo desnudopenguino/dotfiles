@@ -3,18 +3,38 @@
 
 echo "Linking Config Files to Home Directory (~)..."
 # soft link vim config (.vimrc)
-ln -sf `pwd`/.vimrc ~/.vimrc
+if [ ! -h ~/.vimrc ]; then
+	ln -sf `pwd`/.vimrc ~/.vimrc
+else 
+	echo ".vimrc already exists..."
+fi
 
 # soft link vim directory (.vim/)
-ln -sf `pwd`/.vim ~/.vim
+if [ ! -h ~/.vim ]; then
+	ln -sf `pwd`/.vim ~/.vim
+else
+	echo ".vim/ already exists..."
+fi
 
 # soft link tmux config (.tmux.conf)
-ln -sf `pwd`/.tmux.conf ~/.tmux.conf
+if [ ! -h ~/.tmux.conf ]; then
+	ln -sf `pwd`/.tmux.conf ~/.tmux.conf
+else
+	echo ".tmux.conf already exists..."
+fi
 
 # soft link tmux directory
-ln -sf `pwd`/.tmux ~/.tmux
+if [ ! -h ~/.tmux ]; then
+	ln -sf `pwd`/.tmux ~/.tmux
+else
+	echo ".tmux/ already exists..."
+fi
 
-ln -sf `pwd`/.Xdefaults ~/.Xdefaults
+if [ ! -h ~/.Xdefaults ]; then
+	ln -sf `pwd`/.Xdefaults ~/.Xdefaults
+else
+	echo "..Xdefaults already exists..."
+fi
 
 echo "Downloading Submodules..."
 # download the submodules

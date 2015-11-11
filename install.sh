@@ -1,6 +1,5 @@
 #!/bin/sh
 
-
 echo "Linking Config Files to Home Directory (~)..."
 # soft link vim config (.vimrc)
 if [ ! -h ~/.vimrc ]; then

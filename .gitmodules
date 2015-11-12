@@ -5,3 +5,8 @@
 [submodule "Vundle.vim"]
 	path = .vim/bundle/Vundle.vim
 	url = https://github.com/VundleVim/Vundle.vim
+
+[submodule "mediterranean-darkest theme"]
+	path = Plugins/mediterranean-darkest
+	url = https://github.com/desnudopenguino/mediterranean-darkest
+

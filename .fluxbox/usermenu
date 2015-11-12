@@ -1,0 +1,6 @@
+[begin] (Bart's Stuff)
+[encoding] {UTF-8}
+	exec (xterm) {xterm}
+	exec (urxvt) { urxvt -ls }
+	exec (firefox) {firefox}
+	exec (gimp) {gimp}

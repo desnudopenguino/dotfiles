@@ -35,6 +35,13 @@ else
 	echo "..Xdefaults already exists..."
 fi
 
+# soft link vim directory (.vim/)
+if [ ! -h ~/.fluxbox ]; then
+	ln -sf `pwd`/.fluxbox ~/.fluxbox
+else
+	echo ".fluxbox/ already exists..."
+fi
+
 echo "Downloading Submodules..."
 # download the submodules
 git submodule update --init

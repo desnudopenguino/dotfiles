@@ -1,6 +1,7 @@
 #!/bin/sh
 
 
+echo "Linking Config Files to Home Directory (~)..."
 # soft link vim config (.vimrc)
 ln -sf `pwd`/.vimrc ~/.vimrc
 
@@ -15,5 +16,10 @@ ln -sf `pwd`/.tmux ~/.tmux
 
 ln -sf `pwd`/.Xdefaults ~/.Xdefaults
 
+echo "Downloading Submodules..."
 # download the submodules
 git submodule update --init
+
+echo "Installing Vim Plugins..."
+# install vim scripts
+vim -S install.vim > /dev/null 2>&1

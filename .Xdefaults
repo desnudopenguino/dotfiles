@@ -1,10 +1,12 @@
 ! $OpenBSD: dot.Xdefaults,v 1.3 2014/07/10 10:22:59 jasper Exp $
 XTerm*loginShell:true
 XTerm*termName: xterm-256color
+XTerm*faceName: Hack
 
 ! urxvw settings
 urxvt*loginShell: true
-*rxvt*termName: rxvt-unicode-256color
+urxvt*termName: rxvt-unicode-256color
+urxvt*font: xft:Hack
 urxvt*scrollBar: false
 urxvt*background: black
 urxvt*foreground: gray
@@ -12,6 +14,7 @@ urxvt*saveLines: 100000
 !urxvt.borderLess: true
 urxvt*internalBorder: 0
 urxvt*externalBorder: 0
+urxvt*cursorBlink: true
 
 ! transparency
 urxvt*transparent: true

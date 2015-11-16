@@ -160,3 +160,5 @@ bar {
 }
 
 new_window 1pixel
+
+exec --no-startup-id feh --bg-scale ~/.fluxbox/backgrounds/HHQ6f0b.jpg

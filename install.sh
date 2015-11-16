@@ -35,11 +35,18 @@ else
 	echo "..Xdefaults already exists..."
 fi
 
-# soft link vim directory (.vim/)
+# soft link fluxbox directory (.fluxbox/)
 if [ ! -h ~/.fluxbox ]; then
 	ln -sf `pwd`/.fluxbox ~/.fluxbox
 else
 	echo ".fluxbox/ already exists..."
+fi
+
+# soft link i3 directory (.i3/)
+if [ ! -h ~/.i3 ]; then
+	ln -sf `pwd`/.i3 ~/.i3
+else
+	echo ".i3/ already exists..."
 fi
 
 echo "Downloading Submodules..."

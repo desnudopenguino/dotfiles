@@ -155,3 +155,6 @@ bindsym $mod+p mode "resize"
 bar {
         status_command i3status
 }
+
+#Borderless windows
+new_window none

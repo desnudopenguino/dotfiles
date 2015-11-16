@@ -33,6 +33,9 @@ floating_modifier $mod
 #bindsym $mod+Return exec /usr/X11R6/bin/xterm
 bindsym $mod+Return exec /usr/local/bin/urxvt
 
+# start Firefox
+bindsym $mod+Shift+f exec /usr/local/bin/firefox
+
 # kill focused window
 bindsym $mod+Shift+quotedbl kill
 
@@ -156,5 +159,4 @@ bar {
         status_command i3status
 }
 
-#Borderless windows
-new_window none
+new_window 1pixel

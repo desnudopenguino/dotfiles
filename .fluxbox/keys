@@ -135,3 +135,10 @@ Control Mod4 F9 :TakeToWorkspace 9
 Control Mod4 F10 :TakeToWorkspace 10
 Control Mod4 F11 :TakeToWorkspace 11
 Control Mod4 F12 :TakeToWorkspace 12
+
+# Tiling
+Control Mod1 Left :MacroCmd {ResizeTo 46% 100%} {MoveTo 00 00 Left}
+Control Mod1 Right :MacroCmd {ResizeTo 46% 100%} {MoveTo 00 00 Right}
+Control Mod1 Up :MacroCmd {ResizeTo 46% 100%} {MoveTo 00 00 Up}
+Control Mod1 Bottom :MacroCmd {ResizeTo 46% 100%} {MoveTo 00 00 Left}
+Control Mod1 Return :ToggleCmd {Maximize} {Restore}

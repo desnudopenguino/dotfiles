@@ -140,5 +140,6 @@ Control Mod4 F12 :TakeToWorkspace 12
 Control Mod1 Left :MacroCmd {ResizeTo 48% 98%} {MoveTo 1% 00 Left}
 Control Mod1 Right :MacroCmd {ResizeTo 48% 98%} {MoveTo 1% 00 Right}
 Control Mod1 Up :MacroCmd {ResizeTo 98% 48%} {MoveTo 1% 1% Up}
-Control Mod1 Bottom :MacroCmd {ResizeTo 98% 48%} {MoveTo 00 1% Bottom}
+Control Mod1 Down :MacroCmd {ResizeTo 98% 48%} {MoveTo 00 1% Bottom}
 Control Mod1 Return :ToggleCmd {Maximize} {Restore}
+Control Mod1 minus :ToggleCmd {Shade} {Restore}

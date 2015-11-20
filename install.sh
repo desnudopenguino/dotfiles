@@ -49,6 +49,13 @@ else
 	echo ".i3/ already exists..."
 fi
 
+# soft link backgrounds directory (.backgrounds/)
+if [ ! -h ~/.backgrounds ]; then
+	ln -sf `pwd`/.backgrounds ~/.backgrounds
+else
+	echo ".backgrounds/ already exists..."
+fi
+
 echo "Downloading Submodules..."
 # download the submodules
 git submodule update --init

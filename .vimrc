@@ -76,7 +76,7 @@ au FileType css setl ofu=csscomplete#CompleteCSS
 set autoindent
 
 " fold on indenting, faster file navigation maybe?
-set foldmethod=indent
+"set foldmethod=indent
 
 " use ; instead of :, one less keystroke needed!
 map ; :
@@ -88,11 +88,8 @@ if !empty(glob(".vim/bundle/ctrlp.vim"))
 endif
 
 " highlight current cursor line
-"set cursorline
+set cursorline
 
 " show tabs, nbsp, and tabs
 exec "set listchars=tab:\uBB\uBB,trail:\uB7"
 set list
-
-" Configure vim-airline symbols.
-let g:airline_powerline_fonts = 1

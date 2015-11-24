@@ -14,6 +14,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'kien/ctrlp.vim'
 Plugin 'bling/vim-airline'
+Plugin 'majutsushi/tagbar'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -93,3 +94,10 @@ set cursorline
 " show tabs, nbsp, and tabs
 exec "set listchars=tab:\uBB\uBB,trail:\uB7"
 set list
+
+" 81st Coumn highlighting
+highlight ColorColumn ctermbg=magenta
+call matchadd('ColorColumn', '\%81v', 100)
+
+" map F8 to toggle tagbar window
+nmap <F8> :TagbarToggle<CR>

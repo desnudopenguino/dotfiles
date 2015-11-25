@@ -79,9 +79,6 @@ au FileType css setl ofu=csscomplete#CompleteCSS
 " Auto indents the next line
 set autoindent
 
-" fold on indenting, faster file navigation maybe?
-"set foldmethod=indent
-
 " use ; instead of :, one less keystroke needed!
 map ; :
 

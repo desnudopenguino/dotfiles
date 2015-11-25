@@ -10,11 +10,14 @@ call vundle#begin()
 "call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'tpope/vim-fugitive'
-Plugin 'kien/ctrlp.vim'
-Plugin 'bling/vim-airline'
-Plugin 'majutsushi/tagbar'
+Plugin 'VundleVim/Vundle.vim' "Vim Bundler 
+Plugin 'tpope/vim-fugitive' " Git wrapper
+Plugin 'kien/ctrlp.vim' " Fuzzy search
+Plugin 'bling/vim-airline' " Info line at bottom
+Plugin 'kristijanhusak/vim-multiple-cursors' " Multiple cursors at once
+Plugin 'majutsushi/tagbar' " Tagbar for ctags
+Plugin 'ludovicchabant/vim-gutentags' " Autogenerate ctags for file
+Plugin 'airblade/vim-gitgutter' " Gutter notifications for git diff
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

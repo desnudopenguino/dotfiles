@@ -31,6 +31,8 @@ syntax on
 " set the color scheme
 if &term =~ "xterm-256color" || &term =~ "rxvt-unicode-256color" || &term =~ "screen-256color"
 	color distinguished
+	"colorscheme onedark
+	"let g:airline_theme='onedark'
 endif
 
 set ffs=unix,dos,mac

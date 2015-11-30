@@ -18,6 +18,7 @@ Plugin 'kristijanhusak/vim-multiple-cursors' " Multiple cursors at once
 Plugin 'majutsushi/tagbar' " Tagbar for ctags
 Plugin 'ludovicchabant/vim-gutentags' " Autogenerate ctags for file
 Plugin 'airblade/vim-gitgutter' " Gutter notifications for git diff
+Plugin 'scrooloose/syntastic' " Syntax checker
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

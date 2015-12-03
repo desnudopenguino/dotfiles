@@ -104,3 +104,6 @@ call matchadd('ColorColumn', '\%81v', 100)
 
 " map F8 to toggle tagbar window
 nmap <F8> :TagbarToggle<CR>
+
+" Map close buffer without killing split
+"nmap <leader>bc :bp|bd#<CR>

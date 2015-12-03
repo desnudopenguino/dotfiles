@@ -137,9 +137,17 @@ Control Mod4 F11 :TakeToWorkspace 11
 Control Mod4 F12 :TakeToWorkspace 12
 
 # Tiling
+# Left half, Right Half, Top Half, Bottom Half (halves)
 Control Mod1 Left :MacroCmd {ResizeTo 48% 98%} {MoveTo 1% 00 Left}
 Control Mod1 Right :MacroCmd {ResizeTo 48% 98%} {MoveTo 1% 00 Right}
 Control Mod1 Up :MacroCmd {ResizeTo 98% 48%} {MoveTo 1% 1% Up}
 Control Mod1 Down :MacroCmd {ResizeTo 98% 48%} {MoveTo 00 1% Bottom}
-Control Mod1 Return :ToggleCmd {Maximize} {Restore}
+#Top Left, Top Right, Bottom Left, Bottom Right (quarters)
+Control Mod1 1 :MacroCmd {ResizeTo 48% 48%} {MoveTo 1% 1% Up}
+Control Mod1 2 :MacroCmd {ResizeTo 48% 48%} {MoveTo 50% 1% Up}
+Control Mod1 3 :MacroCmd {ResizeTo 48% 48%} {MoveTo 1% 50% Up}
+Control Mod1 4 :MacroCmd {ResizeTo 48% 48%} {MoveTo 50% 50% Up}
+# Full screen
+Control Mod1 Return :MacroCmd {ResizeTo 98% 98%} {MoveTo 1% 00 Left}
+# collapse/shade
 Control Mod1 minus :ToggleCmd {Shade} {Restore}

@@ -162,4 +162,4 @@ bar {
 
 new_window 1pixel
 
-exec --no-startup-id feh --bg-scale ~/.backgrounds/qa93hph.jpg
+exec --no-startup-id feh --bg-scale ~/.backgrounds/qa93hPh.jpg

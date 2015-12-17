@@ -26,6 +26,10 @@ filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
 
+" UTF-8
+set encoding=utf-8
+set fileencoding=utf-8
+
 " Turn syntax on
 syntax on
 
@@ -50,7 +54,7 @@ set shiftwidth=2
 set autoread
 
 " Fast saving
-nmap <leader>w :w!<cr>
+nmap :w :w!<cr>
 
 " split below and right, it looks better
 set splitbelow
@@ -106,4 +110,15 @@ call matchadd('ColorColumn', '\%81v', 100)
 nmap <F8> :TagbarToggle<CR>
 
 " Map close buffer without killing split
-"nmap <leader>bc :bp|bd#<CR>
+
+" Close All buffers easily
+function CloseAllBuffers()
+	bufdo bd
+endfunction
+nmap <F7> :call CloseAllBuffers()<CR>
+
+" Close and replace current buffer with previous buffer in this pane
+fun! CloseBufferKeepPane()
+	bp | bd #
+endfunction
+nmap :bc :call CloseBufferKeepPane()<CR>

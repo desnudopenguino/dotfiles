@@ -45,6 +45,7 @@ set ffs=unix,dos,mac
 " set relative number with actual line number (hybrid numbers) 
 set relativenumber
 set number
+set ruler
 
 " Set tabs to 2 spaces
 set tabstop=2
@@ -87,7 +88,7 @@ au FileType css setl ofu=csscomplete#CompleteCSS
 set autoindent
 
 " use ; instead of :, one less keystroke needed!
-map ; :
+nmap ; :
 
 " commands for CtrlP
 if !empty(glob(".vim/bundle/ctrlp.vim"))
@@ -109,7 +110,8 @@ call matchadd('ColorColumn', '\%81v', 100)
 " map F8 to toggle tagbar window
 nmap <F8> :TagbarToggle<CR>
 
-" Map close buffer without killing split
+" Configure vim-airline symbols.
+let g:airline_powerline_fonts = 1
 
 " Close All buffers easily
 function CloseAllBuffers()

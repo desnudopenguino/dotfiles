@@ -19,6 +19,7 @@ Plugin 'majutsushi/tagbar' " Tagbar for ctags
 Plugin 'ludovicchabant/vim-gutentags' " Autogenerate ctags for file
 Plugin 'airblade/vim-gitgutter' " Gutter notifications for git diff
 Plugin 'scrooloose/syntastic' " Syntax checker
+Plugin 'desnudopenguino/vim-distinguished',{'rtp':'vim/'} "vim distinguished colorscheme
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -36,8 +37,6 @@ syntax on
 " set the color scheme
 if &term =~ "xterm-256color" || &term =~ "rxvt-unicode-256color" || &term =~ "screen-256color"
 	color distinguished
-	"colorscheme onedark
-	"let g:airline_theme='onedark'
 endif
 
 set ffs=unix,dos,mac

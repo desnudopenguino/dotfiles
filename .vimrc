@@ -19,7 +19,7 @@ Plugin 'majutsushi/tagbar' " Tagbar for ctags
 Plugin 'ludovicchabant/vim-gutentags' " Autogenerate ctags for file
 Plugin 'airblade/vim-gitgutter' " Gutter notifications for git diff
 Plugin 'scrooloose/syntastic' " Syntax checker
-Plugin 'desnudopenguino/vim-distinguished',{'rtp':'vim/'} "vim distinguished colorscheme
+Plugin 'Lokaltog/vim-distinguished' "vim distinguished colorscheme
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

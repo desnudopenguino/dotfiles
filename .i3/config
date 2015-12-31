@@ -189,6 +189,6 @@ bar {
 
 new_window 1pixel
 
-exec --no-startup-id feh --bg-scale ~/.backgrounds/qa93hPh.jpg
+exec --no-startup-id feh --bg-scale ~/.backgrounds/R5ftf9o.jpg
 exec /usr/local/bin/urxvt
 exec /usr/local/bin/firefox

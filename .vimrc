@@ -20,6 +20,7 @@ Plugin 'ludovicchabant/vim-gutentags' " Autogenerate ctags for file
 Plugin 'airblade/vim-gitgutter' " Gutter notifications for git diff
 Plugin 'scrooloose/syntastic' " Syntax checker
 Plugin 'Lokaltog/vim-distinguished' "vim distinguished colorscheme
+Plugin 'SwagKingTenK/VimSearch' "Duck Duck Go answers in Vim!
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -102,6 +103,9 @@ set cursorline
 exec "set listchars=tab:\uBB\uBB,trail:\uB7"
 set list
 
+" transparent background
+hi Normal ctermbg=NONE
+
 " 81st Coumn highlighting
 highlight ColorColumn ctermbg=magenta
 call matchadd('ColorColumn', '\%81v', 100)
@@ -123,3 +127,4 @@ fun! CloseBufferKeepPane()
 	bp | bd #
 endfunction
 nmap :bc :call CloseBufferKeepPane()<CR>
+

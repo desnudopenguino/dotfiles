@@ -55,7 +55,7 @@ set shiftwidth=2
 set autoread
 
 " Fast saving
-nmap :w :w!<cr>
+noremap :w :w!<cr>
 
 " split below and right, it looks better
 set splitbelow
@@ -88,7 +88,7 @@ au FileType css setl ofu=csscomplete#CompleteCSS
 set autoindent
 
 " use ; instead of :, one less keystroke needed!
-nmap ; :
+noremap ; :
 
 " commands for CtrlP
 if !empty(glob(".vim/bundle/ctrlp.vim"))

@@ -88,7 +88,7 @@ au FileType css setl ofu=csscomplete#CompleteCSS
 set autoindent
 
 " use ; instead of :, one less keystroke needed!
-noremap ; :
+nmap ; :
 
 " commands for CtrlP
 if !empty(glob(".vim/bundle/ctrlp.vim"))

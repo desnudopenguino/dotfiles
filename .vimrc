@@ -117,14 +117,7 @@ nmap <F8> :TagbarToggle<CR>
 let g:airline_powerline_fonts = 1
 
 " Close All buffers easily
-function CloseAllBuffers()
-	bufdo bd
-endfunction
-nmap <F7> :call CloseAllBuffers()<CR>
+nmap <F7> :bufdo bd<CR>
 
 " Close and replace current buffer with previous buffer in this pane
-fun! CloseBufferKeepPane()
-	bp | bd #
-endfunction
-nmap :bc :call CloseBufferKeepPane()<CR>
-
+nmap :bc :bp <bar> bd #<CR>

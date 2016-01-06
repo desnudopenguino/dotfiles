@@ -110,7 +110,7 @@ call matchadd('ColorColumn', '\%81v', 100)
 nmap ; :
 
 " Fast saving
-noremap :w :w!<cr>
+noremap :w :w!<CR>
 
 " map F8 to toggle tagbar window
 nmap <F8> :TagbarToggle<CR>
@@ -126,6 +126,9 @@ noremap <left> <nop>
 noremap <up> <nop>
 noremap <right> <nop>
 noremap <down> <nop>
+
+" use CTRL + ; to replace escape
+imap ;q <esc>
 
 " commands for CtrlP
 if !empty(glob(".vim/bundle/ctrlp.vim"))

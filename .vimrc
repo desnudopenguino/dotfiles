@@ -74,7 +74,7 @@ set list
 
 " highlight current cursor line
 set cursorline
-"
+
 " Turn syntax on
 syntax on
 
@@ -94,6 +94,7 @@ endif
 set relativenumber
 set number
 set ruler
+
 " transparent background
 hi Normal ctermbg=NONE
 

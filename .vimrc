@@ -107,7 +107,7 @@ call matchadd('ColorColumn', '\%81v', 100)
 """""""""""""""""""""""""""""""""""""""""""
 
 " use ; instead of :, one less keystroke needed!
-nnoremap ; :
+nmap ; :
 
 " Fast saving
 noremap :w :w!<cr>

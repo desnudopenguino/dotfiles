@@ -127,7 +127,7 @@ noremap <up> <nop>
 noremap <right> <nop>
 noremap <down> <nop>
 
-" use CTRL + ; to replace escape
+" use ;q to replace escape (nice on dvorar, and mapped with ; as :)
 imap ;q <esc>
 
 " commands for CtrlP

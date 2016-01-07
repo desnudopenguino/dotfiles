@@ -188,6 +188,7 @@ bar {
 
 new_window 1pixel
 
-exec --no-startup-id feh --bg-scale ~/.backgrounds/VuNqSRR.jpg
+#exec --no-startup-id feh --bg-scale ~/.backgrounds/VuNqSRR.jpg
+exec --no-startup-id ~/dotfiles/scripts/random_wallpaper.ksh
 exec /usr/local/bin/urxvt
 exec /usr/local/bin/firefox

@@ -109,8 +109,8 @@ bindsym $mod+a focus parent
 
 set $ws1 "1:  "
 set $ws2 "2:  "
-set $ws3 "3:  "
-set $ws4 "4:  "
+set $ws3 "3:  "
+set $ws4 "4:  "
 set $ws5 "5:  "
 set $ws6 6
 set $ws7 7
@@ -143,7 +143,7 @@ bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
 assign [class="Firefox"] $ws2
-assign [class="Pcmanfm"] $ws3
+assign [class="Pcmanfm"] $ws4
 assign [class="Gimp"] $ws5
 
 # reload the configuration file
@@ -191,3 +191,5 @@ new_window 1pixel
 exec --no-startup-id ~/dotfiles/scripts/random_wallpaper.ksh
 exec /usr/local/bin/urxvt
 exec /usr/local/bin/firefox
+exec i3-msg 'workspace $ws9 ; exec urxvt -e htop'
+exec i3-msg 'workspace $ws3 ; exec urxvt -e irssi'

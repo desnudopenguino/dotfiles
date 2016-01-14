@@ -127,8 +127,8 @@ noremap <up> <nop>
 noremap <right> <nop>
 noremap <down> <nop>
 
-" use ;q to replace escape (nice on dvorar, and mapped with ; as :)
-imap ;q <esc>
+" use ;q to replace escape and save (nice on dvorak, and mapped with ; as :)
+imap ;q <esc> <bar> :w
 
 " commands for CtrlP
 if !empty(glob(".vim/bundle/ctrlp.vim"))

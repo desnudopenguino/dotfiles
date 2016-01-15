@@ -15,7 +15,6 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim' "Vim Bundler 
 Plugin 'tpope/vim-fugitive' " Git wrapper
 Plugin 'kien/ctrlp.vim' " Fuzzy search
-Plugin 'bling/vim-airline' " Info line at bottom
 Plugin 'kristijanhusak/vim-multiple-cursors' " Multiple cursors at once
 Plugin 'majutsushi/tagbar' " Tagbar for ctags
 Plugin 'ludovicchabant/vim-gutentags' " Autogenerate ctags for file
@@ -23,6 +22,8 @@ Plugin 'airblade/vim-gitgutter' " Gutter notifications for git diff
 Plugin 'scrooloose/syntastic' " Syntax checker
 Plugin 'Lokaltog/vim-distinguished' "vim distinguished colorscheme
 Plugin 'SwagKingTenK/VimSearch' "Duck Duck Go answers in Vim!
+Plugin 'onur/vim-motivate' "Motivational goodness!
+Plugin 'itchyny/lightline.vim' " Info line at bottom, more customizable than vim-airline
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -39,6 +40,7 @@ filetype plugin indent on    " required
 " UTF-8
 set encoding=utf-8
 set fileencoding=utf-8
+scriptencoding utf-8
 
 " File Format
 set ffs=unix,dos,mac
@@ -101,6 +103,16 @@ hi Normal ctermbg=NONE
 " 81st Coumn highlighting
 highlight ColorColumn ctermbg=magenta
 call matchadd('ColorColumn', '\%81v', 100)
+
+
+let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \ 'component': {
+      \   'readonly': '%{&readonly?"⭤":""}',
+      \ },
+      \ 'separator': { 'left': "\ue0b0", 'right': "\ue0b2" },
+      \ 'subseparator': { 'left': "\ue0b1", 'right': "\ue0b3" }
+      \ }
 
 """""""""""""""""""""""""""""""""""""""""""
 " Commands/shortcuts

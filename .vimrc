@@ -286,7 +286,7 @@ noremap <right> <nop>
 noremap <down> <nop>
 
 " use ;q to replace escape and save (nice on dvorak, and mapped with ; as :)
-imap ;q <esc> <bar> :w<CR>
+inoremap ;q <esc>:w<CR>
 
 " reload .vimrc
 nmap ;r :source ~/.vimrc<CR>

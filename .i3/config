@@ -194,3 +194,4 @@ exec /usr/local/bin/firefox
 exec i3-msg 'workspace $ws9 ; exec urxvt -e htop'
 exec i3-msg 'workspace $ws3 ; exec urxvt -e irssi'
 exec i3-msg 'workspace $ws4 ; exec urxvt -e ranger'
+exec i3-msg 'workspace $ws10 ; exec urxvt -e cmus'

@@ -56,6 +56,13 @@ else
 	echo ".backgrounds/ already exists..."
 fi
 
+# soft link .kshrc file
+if [ ! -h ~/.kshrc ]; then
+	ln -sf `pwd`/.kshrc ~/.kshrc
+else 
+	echo ".kshrc already exists..."
+fi
+
 echo "Downloading Submodules..."
 # download the submodules
 git submodule update --init
@@ -63,3 +70,5 @@ git submodule update --init
 echo "Installing Vim Plugins..."
 # install vim scripts
 vim +PluginInstall +qall > /dev/null 2>&1
+
+

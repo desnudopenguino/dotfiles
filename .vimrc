@@ -36,6 +36,7 @@ filetype plugin indent on    " required
 """""""""""""""""""""""""""""""""""""""""""
 " Behaviors 
 """""""""""""""""""""""""""""""""""""""""""
+set shell=$SHELL
 
 " UTF-8
 set encoding=utf-8
@@ -122,7 +123,7 @@ let g:lightline = {
 nmap ; :
 
 " Fast saving
-noremap :w :w!<CR>
+noremap ;w :w!<CR>
 
 " map F8 to toggle tagbar window
 nmap <F8> :TagbarToggle<CR>
@@ -268,7 +269,7 @@ let g:lightline = {
 nmap ; :
 
 " Fast saving
-noremap :w :w!<CR>
+noremap ;w :w!<CR>
 
 " map F8 to toggle tagbar window
 nmap <F8> :TagbarToggle<CR>
@@ -289,7 +290,7 @@ noremap <down> <nop>
 inoremap ;q <esc>:w<CR>
 
 " reload .vimrc
-nmap ;r :source ~/.vimrc<CR>
+noremap ;r :source ~/.vimrc<CR>
 
 " commands for CtrlP
 if !empty(glob(".vim/bundle/ctrlp.vim"))
@@ -302,3 +303,20 @@ if !empty(glob(".vim/bundle/ctrlp.vim"))
 	let g:ctrlp_map = '<c-p>'
 	let g:ctrlp_cmd = 'CtrlP'
 endif
+
+" work tracking function(s)
+function! TrackTime()
+	redir => tmux_session
+	silent execute "!tmux list-pane -F '#S' | head -1"
+	redir END
+	echom tmux_session
+	
+	let today=strftime('%d_%m_%y')
+	let today2=tmux_session.today.".log"
+	echom today2
+	if filereadable("~/work_logs/".today2)
+		echom "This is awesome"
+	else
+		execute "!touch ~/work_logs/".today2
+	endif
+endfunction

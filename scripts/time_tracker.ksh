@@ -46,17 +46,25 @@ OIFS=$IFS
 IFS=':'
 set -A arr $(date +"%H:%M")
 IFS=$OIFS
-typeset -i min
+typeset -i min hr qtr rmnd calc_min calc_hr
+hr=${arr[0]}
 min=${arr[1]}
-typeset -i qtr
 qtr=$min/15
-typeset -i rmnd
 rmnd=$min%15
 if [[ $rmnd -gt 6 ]]; then
 qtr=$qtr+1
 fi
-min=$qtr*15
-endTime="${arr[0]}:$min"
+calc_min=$qtr*15
+calc_hr=$hr
+if [[ $qtr -eq 0 ]]; then
+typeset -L calc_min
+calc_min=00
+elif [[ $calc_min -eq 60 ]]; then
+typeset -L calc_min
+calc_min=00
+calc_hr=$hr+1
+fi
+endTime="$calc_hr:$calc_min"
 printf $endTime
 }
 export calculateQuarter

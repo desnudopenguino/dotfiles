@@ -2,6 +2,7 @@
 
 while :
 do
+
 echo "" `date +"%y/%m/%d"` " " `date +"%H:%M:%S"`
-	sleep 1
+	sleep 5
 done

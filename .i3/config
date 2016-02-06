@@ -212,6 +212,7 @@ client.urgent						$base02	$base08	$base00	$base0F
 # finds out, if available)
 bar {
 	position top
+	strip_workspace_numbers yes
         # status_command i3status
         status_command ~/dotfiles/scripts/i3bar.ksh
 		colors {

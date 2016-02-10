@@ -9,6 +9,10 @@ date=$(date +"%d_%m_%y")
 filename=~/"work_logs/$session-$date.csv"
 touch $filename
 echo "$filename created..."
+if [[ -e $1 ]]; then
+	echo "Joining $1 to $filename"
+	joinLog $session-$date $1
+fi
 }
 export newLog
 
@@ -138,6 +142,30 @@ printf "Time Worked: $duration\n"
 # get the total hours for this day
 function dayLog {
 
+}
+
+function joinLog {
+if [[ -z "$1" ]]; then
+	echo "Please enter both files"
+else
+out_file=~/"work_logs/$1.csv"
+fi
+
+if [[ -z "$2" ]]; then
+	echo "Please enter the file to be added"
+else
+in_file=$2
+fi
+if [[ -e $out_file ]]; then
+	echo "$out_file exists."
+else
+	touch $out_file
+fi
+if [[ -e $in_file ]]; then
+	cat $in_file >> $out_file
+else
+	echo "$in_file doesn't exist"
+fi
 }
 
 # Test function

@@ -12,6 +12,8 @@ echo "$filename created..."
 if [[ -e $1 ]]; then
 	echo "Joining $1 to $filename"
 	joinLog $session-$date $1
+	rm $1
+	echo "$1 joined and removed"
 fi
 }
 export newLog

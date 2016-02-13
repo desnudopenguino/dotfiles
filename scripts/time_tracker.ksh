@@ -44,7 +44,7 @@ echo "Time Worked: $time_worked"
 if [[ $# -eq 1 ]]; then
 	message=$1
 	out="$end\t$time_worked\t$message\n"
-echo "Comment: $message"
+	echo "Comment: $message"
 else
 	out="$end\t$time_worked\n"
 fi
@@ -66,17 +66,17 @@ min=${arr[1]}
 qtr=$min/$minimum
 rmnd=$min%$minimum
 if [[ $rmnd -gt $middle ]]; then
-qtr=$qtr+1
+	qtr=$qtr+1
 fi
 calc_min=$qtr*$minimum
 calc_hr=$hr
 if [[ $qtr -eq 0 ]]; then
-typeset -L calc_min
-calc_min=00
+	typeset -L calc_min
+	calc_min=00
 elif [[ $calc_min -eq 60 ]]; then
-typeset -L calc_min
-calc_min=00
-calc_hr=$hr+1
+	typeset -L calc_min
+	calc_min=00
+	calc_hr=$hr+1
 fi
 endTime="$calc_hr:$calc_min"
 printf $endTime
@@ -95,6 +95,28 @@ printf $start_time
 }
 export getStart
 
+function getTime {
+typeset -i comment_length
+if [[ -e $1 ]]; then
+	file=$1
+else
+	session=$(tmux list-pane -F '#S' | head -1)
+	date=$(date +"%d_%m_%y")
+	file=~/"work_logs/$session-$date.csv"
+fi
+
+echo "Date:\t\tStart:\tEnd:\tDur:\tComments:"
+while read date start end duration comments
+do
+	comment_length=${#comments}
+	if [[ ${#comments} -gt 60 ]]; then
+		comments=$(echo $comments | awk '{printf substr($0,1,57)}')"..."
+	fi
+	echo "$date\t$start\t$end\t$duration\t$comments"
+done < "$file"
+}
+export getTime
+
 # calculate the duration between two HH:MM times
 function calculateDuration {
 typeset -i start_secs end_secs duration_secs duration_mins duration_hrs
@@ -108,8 +130,8 @@ duration_hrs=$duration_secs/3600
 duration_mins=$duration_secs%3600/60
 
 if [[ $duration_mins -eq 0 ]]; then
-typeset -L duration_mins
-duration_mins=00
+	typeset -L duration_mins
+	duration_mins=00
 fi
 
 duration="$duration_hrs:$duration_mins"
@@ -124,11 +146,9 @@ OIFS=$IFS
 IFS=':'
 set -A new_time $1
 IFS=$OIFS
-
 hr_mins=${new_time[0]}*60
 mins=$hr_mins+${new_time[1]}
 secs=$mins*60
-
 printf $secs
 }
 export calculateSeconds
@@ -150,13 +170,13 @@ function joinLog {
 if [[ -z "$1" ]]; then
 	echo "Please enter both files"
 else
-out_file=~/"work_logs/$1.csv"
+	out_file=~/"work_logs/$1.csv"
 fi
 
 if [[ -z "$2" ]]; then
 	echo "Please enter the file to be added"
 else
-in_file=$2
+	in_file=$2
 fi
 if [[ -e $out_file ]]; then
 	echo "$out_file exists."

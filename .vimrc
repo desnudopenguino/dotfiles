@@ -13,17 +13,14 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim' "Vim Bundler 
+Plugin 'itchyny/lightline.vim' " Info line at bottom, more customizable than vim-airline
 Plugin 'tpope/vim-fugitive' " Git wrapper
+Plugin 'airblade/vim-gitgutter' " Gutter notifications for git diff
 Plugin 'kien/ctrlp.vim' " Fuzzy search
 Plugin 'kristijanhusak/vim-multiple-cursors' " Multiple cursors at once
 Plugin 'majutsushi/tagbar' " Tagbar for ctags
 Plugin 'ludovicchabant/vim-gutentags' " Autogenerate ctags for file
-Plugin 'airblade/vim-gitgutter' " Gutter notifications for git diff
-Plugin 'scrooloose/syntastic' " Syntax checker
 Plugin 'Lokaltog/vim-distinguished' "vim distinguished colorscheme
-Plugin 'SwagKingTenK/VimSearch' "Duck Duck Go answers in Vim!
-Plugin 'onur/vim-motivate' "Motivational goodness!
-Plugin 'itchyny/lightline.vim' " Info line at bottom, more customizable than vim-airline
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

@@ -114,6 +114,8 @@ do
 	fi
 	echo "$date\t$start\t$end\t$duration\t$comments"
 done < "$file"
+total_duration=`dayLog $1`
+echo "\t\t\tTotal:\t$total_duration"
 }
 export getTime
 
@@ -163,8 +165,34 @@ printf "Time Worked: $duration\n"
 
 # get the total hours for this day
 function dayLog {
+if [[ -e $1 ]]; then
+	file=$1
+else
+	session=$(tmux list-pane -F '#S' | head -1)
+	date=$(date +"%d_%m_%y")
+	file=~/"work_logs/$session-$date.csv"
+fi
+typeset -i hrs mins calc_hrs calc_mins
+hrs=0
+mins=0
+while read date start end duration comments
+do
+OIFS=$IFS
+IFS=':'
+set -A new_time $duration
+IFS=$OIFS
+hrs=$hrs+${new_time[0]}
+mins=$mins+${new_time[1]}
 
+done < "$file"
+calc_hrs=$mins/60
+calc_mins=$mins%60
+hrs=$hrs+$calc_hrs
+mins=$calc_mins
+
+printf "$hrs:$mins"
 }
+export dayLog
 
 function joinLog {
 if [[ -z "$1" ]]; then
@@ -189,6 +217,7 @@ else
 	echo "$in_file doesn't exist"
 fi
 }
+export joinLog
 
 # Test function
 function testing {
@@ -199,3 +228,16 @@ calculateDuration $start_time $end_time
 
 }
 export testing
+
+function log {
+if [[ ${#} -eq 0 ]]; then
+#print start message type stuff
+echo "log is made to create and manage work logs in a cli manner, for the cli-heavy users"
+elif [[ $1 -eq "n" ]]; then
+	echo "create new log"
+else
+	echo "empty"
+fi
+
+}
+export log

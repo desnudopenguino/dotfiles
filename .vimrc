@@ -33,7 +33,7 @@ filetype plugin indent on    " required
 " Behaviors 
 """""""""""""""""""""""""""""""""""""""""""
 
-set shell=/bin/sh
+set shell=/usr/local/bin/bash
 
 " UTF-8
 set encoding=utf-8
@@ -142,12 +142,6 @@ inoremap ;q <esc>:w<CR>
 
 " reload .vimrc
 noremap ;r :source ~/.vimrc<CR>
-
-" commands for CtrlP
-if !empty(glob(".vim/bundle/ctrlp.vim"))
-	let g:ctrlp_map = '<c-p>'
-	let g:ctrlp_cmd = 'CtrlP'
-endif
 
 " commands for CtrlP
 if !empty(glob(".vim/bundle/ctrlp.vim"))

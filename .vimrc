@@ -29,11 +29,11 @@ filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
 
-
-
 """""""""""""""""""""""""""""""""""""""""""
 " Behaviors 
 """""""""""""""""""""""""""""""""""""""""""
+
+set shell=/bin/sh
 
 " UTF-8
 set encoding=utf-8

@@ -60,6 +60,9 @@ set nowritebackup
 set splitbelow
 set splitright
 
+" turn off gitgutter grep color command for gitgutter
+let g:gitgutter_grep_command='grep -e'
+
 """""""""""""""""""""""""""""""""""""""""""
 " Visuals
 """""""""""""""""""""""""""""""""""""""""""

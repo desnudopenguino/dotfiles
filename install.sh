@@ -69,6 +69,4 @@ git submodule update --init
 
 echo "Installing Vim Plugins..."
 # install vim scripts
-vim +PluginInstall +qall > /dev/null 2>&1
-
-
+vim +PluginInstall +qall 

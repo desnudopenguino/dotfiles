@@ -13,7 +13,7 @@ do
 	swap_mem=`top -bn1 | grep 'Memory' | cut -d ' ' -f 10`
 
 	cpu_temp=`sysctl hw.sensors.acpithinkpad0.temp0 | cut -d = -f 2 | cut -d . -f 1`
-	date=`date +"%y/%m/%d"`
+	date=`date +"%d/%m/%y"`
 	clock=`date +"%H:%M:%S"`
 	power=`sysctl hw.sensors.acpiac0.indicator0 | cut -d = -f 2 | cut -d ' ' -f 1`
 	if [[ $power == "On" ]]; then

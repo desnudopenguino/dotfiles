@@ -1,3 +1,6 @@
+# allow for the powerline icons
+export LC_CTYPE=en_US.UTF-8 
+
 # change the cli line
 export PS1='$(print -n "${PWD}\n$ ")'
 
@@ -5,6 +8,8 @@ export PS1='$(print -n "${PWD}\n$ ")'
 alias ll='ls -laf'
 alias vi='vim'
 alias xlock='xlock -visual TrueColor -mode random'
+
+# Tmux aliases
 alias tml='tmux ls'
 alias tma='tmux a -t'
 

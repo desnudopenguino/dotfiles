@@ -2,19 +2,23 @@
 while :
 do
 
-	wifi_ssid=`ifconfig rtwn0 | grep ieee80211 | cut -d ' ' -f 3`
-	wifi_power=`ifconfig rtwn0 | grep ieee80211 | cut -d ' ' -f 8`
+	# CPU
 	cpu_speed=`sysctl hw.cpuspeed | cut -d = -f 2`
 	cpu=`top -bn1 | grep 'CPUs' | sed -n 's/.*, *\([0-9.]*\)%* id.*/\1/p' | awk '{print 100 - $1"%"}'`
+	cpu_temp=`sysctl hw.sensors.acpithinkpad0.temp0 | cut -d = -f 2 | cut -d . -f 1`
+
+	# Memory
 	mem=`top -bn1 | grep 'Memory'`
 	used_mem=`top -bn1 | grep 'Memory' | cut -d ' ' -f 3`
 	free_mem=`top -bn1 | grep 'Memory' | cut -d ' ' -f 6`
 	cache_mem=`top -bn1 | grep 'Memory' | cut -d ' ' -f 8`
 	swap_mem=`top -bn1 | grep 'Memory' | cut -d ' ' -f 10`
 
-	cpu_temp=`sysctl hw.sensors.acpithinkpad0.temp0 | cut -d = -f 2 | cut -d . -f 1`
+	# Date/Time
 	date=`date +"%d/%m/%y"`
 	clock=`date +"%H:%M:%S"`
+
+	# Power
 	power=`sysctl hw.sensors.acpiac0.indicator0 | cut -d = -f 2 | cut -d ' ' -f 1`
 	if [[ $power == "On" ]]; then
 		power_icon=""
@@ -40,6 +44,7 @@ full_bat=$(sysctl hw.sensors.acpibat0.watthour0 | cut -d = -f 2 | cut -d ' ' -f 
 		fi
 	fi
 
-echo "   "$wifi_ssid $wifi_power"   "$cpu_speed"Mhz " $cpu $cpu_temp"°   "$used_mem"/"$free_mem"   "$date"   "$clock"  "$power_icon
+	# final output
+echo "  "$wifi_output"   "$cpu_speed"Mhz " $cpu $cpu_temp"°   "$used_mem"/"$free_mem"   "$date"   "$clock"  "$power_icon
 	sleep 5
 done

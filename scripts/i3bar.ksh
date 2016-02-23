@@ -2,8 +2,28 @@
 while :
 do
 
-	wifi_ssid=`ifconfig rtwn0 | grep ieee80211 | cut -d ' ' -f 3`
-	wifi_power=`ifconfig rtwn0 | grep ieee80211 | cut -d ' ' -f 8`
+	# Network Data
+set -A connections `ifconfig | grep 'UP,BRO' | cut -d : -f 1`
+net_output=" "
+for i in ${connections[@]}
+do
+
+	conn=$(ifconfig $i)
+	media=`echo $conn | cut -d : -f 10 | cut -d ' ' -f 1`
+	if [[ $media -eq 'Ethernet' ]]; then
+		media_type=`echo $conn | cut -d : -f 10 | cut -d \( -f 2 | cut -d ' ' -f 1`
+		media_ip=`echo $conn | cut -d : -f 11 | cut -d ' ' -f 4`
+
+		net_output="$net_output   $media_ip $media_type"
+
+	fi
+	if [[ $media -eq 'IEEE802.11' ]]; then
+		wifi_ssid=`echo $conn | grep ieee80211 | cut -d ' ' -f 3`
+		wifi_power=`echo $conn | grep ieee80211 | cut -d ' ' -f 8`
+		media_ip=`echo $conn | cut -d : -f 11 | cut -d ' ' -f 4`
+		net_output=$net_output"   $media_ip $wifi_ssid $wifi_power"
+	fi
+done
 	cpu_speed=`sysctl hw.cpuspeed | cut -d = -f 2`
 	cpu=`top -bn1 | grep 'CPUs' | sed -n 's/.*, *\([0-9.]*\)%* id.*/\1/p' | awk '{print 100 - $1"%"}'`
 	mem=`top -bn1 | grep 'Memory'`
@@ -40,6 +60,6 @@ full_bat=$(sysctl hw.sensors.acpibat0.watthour0 | cut -d = -f 2 | cut -d ' ' -f 
 		fi
 	fi
 
-echo "   "$wifi_ssid $wifi_power"   "$cpu_speed"Mhz " $cpu $cpu_temp"°   "$used_mem"/"$free_mem"   "$date"   "$clock"  "$power_icon
+echo $net_output"   "$cpu_speed"Mhz " $cpu $cpu_temp"°   "$used_mem"/"$free_mem"   "$date"   "$clock"  "$power_icon
 	sleep 5
 done

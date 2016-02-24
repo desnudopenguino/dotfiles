@@ -7,22 +7,20 @@ set -A connections `ifconfig | grep 'UP,BRO' | cut -d : -f 1`
 net_output=" "
 for i in ${connections[@]}
 do
-
-	conn=$(ifconfig $i)
-	media=`echo $conn | cut -d : -f 10 | cut -d ' ' -f 1`
-	if [[ $media -eq 'Ethernet' ]]; then
-		media_type=`echo $conn | cut -d : -f 10 | cut -d \( -f 2 | cut -d ' ' -f 1`
-		media_ip=`echo $conn | cut -d : -f 11 | cut -d ' ' -f 4`
-
+	active=`ifconfig $i | grep 'status: active'`
+	media=`ifconfig $i | grep 'media'|  cut -d : -f 2 | cut -d ' ' -f 2`
+	if [[ -n $active ]]; then
+	if [[ $media == "Ethernet" ]]; then
+		media_type=`ifconfig $i | grep 'media' | cut -d \( -f 2 | cut -d ' ' -f 1`
+		media_ip=`ifconfig $i | grep 'inet' | cut -d ' ' -f 2`
 		net_output="$net_output   $media_ip $media_type"
-
-	fi
-	if [[ $media -eq 'IEEE802.11' ]]; then
-		wifi_ssid=`echo $conn | grep ieee80211 | cut -d ' ' -f 3`
-		wifi_power=`echo $conn | grep ieee80211 | cut -d ' ' -f 8`
-		media_ip=`echo $conn | cut -d : -f 11 | cut -d ' ' -f 4`
+	elif [[ $media == "IEEE802.11" ]]; then
+		wifi_ssid=`ifconfig $i | grep ieee80211 | cut -d ' ' -f 3`
+		wifi_power=`ifconfig $i | grep ieee80211 | cut -d ' ' -f 8`
+		media_ip=`ifconfig $i | grep inet | cut -d ' ' -f 2`
 		net_output=$net_output"   $media_ip $wifi_ssid $wifi_power"
 	fi
+fi
 done
 	# CPU
 	cpu_speed=`sysctl hw.cpuspeed | cut -d = -f 2`
@@ -67,6 +65,6 @@ full_bat=$(sysctl hw.sensors.acpibat0.watthour0 | cut -d = -f 2 | cut -d ' ' -f 
 	fi
 
 	# final output
-echo $net_output"   "$cpu_speed"Mhz " $cpu $cpu_temp"°   "$used_mem"/"$free_mem"   "$date"   "$clock"  "$power_icon
+echo "$net_output   "$cpu_speed"Mhz " $cpu $cpu_temp"°   "$used_mem"/"$free_mem"   "$date"   "$clock"  "$power_icon
 	sleep 5
 done

@@ -54,15 +54,28 @@ export stopLog
 
 # calculate the quarter for time (currently 15 mins, can be changed though
 function calculateQuarter {
-typeset -i min hr qtr rmnd calc_min calc_hr minimum middle
+typeset -i hr min qtr rmnd calc_min calc_hr minimum middle
 minimum=15
 middle=$minimum/2
 OIFS=$IFS
 IFS=':'
 set -A arr $(date +"%H:%M")
 IFS=$OIFS
-hr=${arr[0]}
-min=${arr[1]}
+hr_start=`echo ${arr[0]} | cut -c1`
+if [[ $hr_start == 0 ]]; then
+	hr_new=${arr[0]}
+	hr=${hr_new#?}
+else
+	hr=${arr[0]}
+fi
+min_start=`echo ${arr[1]} | cut -c1`
+if [[ $min_start == '0' ]]; then
+	min_new=${arr[1]}
+	min=${min_new#?}
+else
+	min=${arr[1]}
+fi
+
 qtr=$min/$minimum
 rmnd=$min%$minimum
 if [[ $rmnd -gt $middle ]]; then
@@ -96,7 +109,7 @@ printf $start_time
 export getStart
 
 function getTime {
-typeset -i comment_length
+typeset -i comment_length row
 if [[ -e $1 ]]; then
 	file=$1
 else
@@ -105,14 +118,17 @@ else
 	file=~/"work_logs/$session-$date.csv"
 fi
 
-echo "Date:\t\tStart:\tEnd:\tDur:\tComments:"
+row=1
+
+echo "#:\tDate:\t\tStart:\tEnd:\tDur:\tComments:"
 while read date start end duration comments
 do
 	comment_length=${#comments}
-	if [[ ${#comments} -gt 60 ]]; then
-		comments=$(echo $comments | awk '{printf substr($0,1,57)}')"..."
+	if [[ ${#comments} -gt 50 ]]; then
+		comments=$(echo $comments | awk '{printf substr($0,1,47)}')"..."
 	fi
-	echo "$date\t$start\t$end\t$duration\t$comments"
+	echo "$row\t$date\t$start\t$end\t$duration\t$comments"
+	row=$row+1
 done < "$file"
 total_duration=`dayLog $1`
 echo "\t\t\tTotal:\t$total_duration"
@@ -219,25 +235,56 @@ fi
 }
 export joinLog
 
-# Test function
-function testing {
-start_time=`getStart`
-end_time=`calculateQuarter`
-calculateDuration $start_time $end_time
+# wrapper function wl -<flags> [args...]
+function wl {
+	# if no arguments print out the current log's time, if that log exists
+	if [[ ${#} -eq 0 ]]; then
+		getTime
+	else 
+		args_1=$1
+		start=`echo $args_1 | cut -c1`
+		
+		# make sure flags are marked by a '-'
+		if [[ $start == '-' ]]; then
+			#continue
+			args_1=${args_1#?}
+			continue=true
 
+			# iterate through flags
+			while [[ $continue == true ]]
+			do
+				arg=`echo $args_1 | cut -c1`
+				args_1=${args_1#?}
+				#echo $arg
+				if [[ -z $args_1 ]]; then
+					continue=false
+				fi
+				#separate flag logic
 
+				# new log
+				if [[ $arg == 'N' ]]; then
+					newLog $2
+				fi
+
+				# start the log
+				if [[ $arg == 's' ]]; then
+					startLog
+				fi
+
+				# stop the log
+				if [[ $arg == 'f' ]]; then
+					#echo $2
+					stopLog "$2"
+				fi
+
+				# get current work block time
+				if [[ $arg == 'c' ]]; then
+					currentLog
+				fi
+			done
+		else
+			echo "First Argument must be a '-' followed by one or more flags"
+		fi
+	fi
 }
-export testing
-
-function log {
-if [[ ${#} -eq 0 ]]; then
-#print start message type stuff
-echo "log is made to create and manage work logs in a cli manner, for the cli-heavy users"
-elif [[ $1 -eq "n" ]]; then
-	echo "create new log"
-else
-	echo "empty"
-fi
-
-}
-export log
+export wl

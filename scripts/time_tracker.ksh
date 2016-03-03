@@ -164,8 +164,20 @@ OIFS=$IFS
 IFS=':'
 set -A new_time $1
 IFS=$OIFS
-hr_mins=${new_time[0]}*60
-mins=$hr_mins+${new_time[1]}
+hr_start=`echo ${new_time[0]} | cut -c1`
+if [[ $hr_start == 0 ]]; then
+	hr_new=${arr[0]}
+	hr_mins=${hr_new#?}
+else
+	hr_mins=${arr[0]}
+fi
+min_start=`echo ${new_time[1]} | cut -c1`
+if [[ $min_start == 0 ]]; then
+	min_new=${arr[1]}
+	mins=${min_new#?}
+else
+	mins=${arr[1]}
+fi
 secs=$mins*60
 printf $secs
 }
@@ -235,6 +247,18 @@ fi
 }
 export joinLog
 
+function getItem {
+if [[ -e $1 ]]; then
+	echo "Choose an entry number, dangus!"
+else
+	session=$(tmux list-pane -F '#S' | head -1)
+	date=$(date +"%d_%m_%y")
+	filename=~/"work_logs/$session-$date.csv"
+	echo "Row $1\n"
+	sed -n $1p $filename
+fi
+}
+
 # wrapper function wl -<flags> [args...]
 function wl {
 	# if no arguments print out the current log's time, if that log exists
@@ -280,6 +304,11 @@ function wl {
 				# get current work block time
 				if [[ $arg == 'c' ]]; then
 					currentLog
+				fi
+
+				# get extended comments for an entry (i)tem
+				if [[ $arg == 'i' ]]; then
+					getItem $2
 				fi
 			done
 		else

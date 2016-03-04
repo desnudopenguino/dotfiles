@@ -169,15 +169,17 @@ if [[ $hr_start == 0 ]]; then
 	hr_new=${arr[0]}
 	hr_mins=${hr_new#?}
 else
-	hr_mins=${arr[0]}
+	hr_mins=${new_time[0]}
 fi
+hr_mins=$hr_mins*60
 min_start=`echo ${new_time[1]} | cut -c1`
 if [[ $min_start == 0 ]]; then
-	min_new=${arr[1]}
+	min_new=${new_time[1]}
 	mins=${min_new#?}
 else
-	mins=${arr[1]}
+	mins=${new_time[1]}
 fi
+mins=$mins+$hr_mins
 secs=$mins*60
 printf $secs
 }

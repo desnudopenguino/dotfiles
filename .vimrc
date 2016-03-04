@@ -144,6 +144,10 @@ inoremap ;q <esc>:w<CR>
 " reload .vimrc
 noremap ;r :source ~/.vimrc<CR>
 
+" insert timestamp
+:nnoremap <F5> "=strftime("%c")<CR>P
+:inoremap <F5> <C-R>=strftime("%c")<CR>
+
 " commands for CtrlP
 if !empty(glob(".vim/bundle/ctrlp.vim"))
 	let g:ctrlp_map = '<c-p>'

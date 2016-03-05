@@ -22,6 +22,7 @@ Plugin 'airblade/vim-gitgutter' " Gutter notifications for git diff
 Plugin 'Lokaltog/vim-distinguished' "vim distinguished colorscheme
 Plugin 'onur/vim-motivate' "Motivational goodness!
 Plugin 'itchyny/lightline.vim' " Info line at bottom, more customizable than vim-airline
+Plugin 'lervag/vimtex' " Tex/LaTex plugin for making pretty outputs
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

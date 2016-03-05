@@ -131,7 +131,7 @@ do
 	row=$row+1
 done < "$file"
 total_duration=`dayLog $1`
-echo "\t\t\tTotal:\t$total_duration"
+echo "\t\t\t\tTotal:\t$total_duration"
 }
 export getTime
 

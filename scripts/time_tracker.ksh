@@ -130,7 +130,7 @@ do
 	echo "$row\t$date\t$start\t$end\t$duration\t$comments"
 	row=$row+1
 done < "$file"
-total_duration=`dayLog $1`
+total_duration=`fullLog $1`
 echo "\t\t\t\tTotal:\t$total_duration"
 }
 export getTime
@@ -190,11 +190,11 @@ function currentLog {
 start=`getStart`
 now=`date +"%H:%M"`
 duration=`calculateDuration $start $now`
-printf "Time Worked: $duration\n"
+printf "Start:\tNow:\tTime Worked:\n$start\t$now\t$duration\n"
 }
 
-# get the total hours for this day
-function dayLog {
+# get the total hours for this cur
+function fullLog {
 if [[ -e $1 ]]; then
 	file=$1
 else
@@ -221,6 +221,44 @@ hrs=$hrs+$calc_hrs
 mins=$calc_mins
 
 printf "$hrs:$mins"
+}
+export fullLog
+
+
+function dayLog {
+if [[ -z $1 ]]; then
+	cur_date=$(date +"%m/%d/%y")
+else
+	cur_date=$1
+fi
+
+if [[ -e $2 ]]; then
+	file=$2
+else
+	session=$(tmux list-pane -F '#S' | head -1)
+	file_date=$(date +"%d_%m_%y")
+	file=~/"work_logs/$session-$file_date.csv"
+fi
+typeset -i hrs mins calc_hrs calc_mins
+hrs=0
+mins=0
+while read date start end duration comments
+do
+	if [[ $date == $cur_date ]]; then
+OIFS=$IFS
+IFS=':'
+set -A new_time $duration
+IFS=$OIFS
+hrs=$hrs+${new_time[0]}
+mins=$mins+${new_time[1]}
+fi
+done < "$file"
+calc_hrs=$mins/60
+calc_mins=$mins%60
+hrs=$hrs+$calc_hrs
+mins=$calc_mins
+
+printf "$cur_date: $hrs:$mins"
 }
 export dayLog
 
@@ -250,13 +288,12 @@ fi
 export joinLog
 
 function getItem {
-if [[ -e $1 ]]; then
+if [[ -z $1 ]]; then
 	echo "Choose an entry number, dangus!"
 else
 	session=$(tmux list-pane -F '#S' | head -1)
 	date=$(date +"%d_%m_%y")
 	filename=~/"work_logs/$session-$date.csv"
-	echo "Row $1\n"
 	sed -n $1p $filename
 fi
 }
@@ -311,6 +348,11 @@ function wl {
 				# get extended comments for an entry (i)tem
 				if [[ $arg == 'i' ]]; then
 					getItem $2
+				fi
+
+				# get the date stuff
+				if [[ $arg == 'd' ]]; then
+					echo `dayLog $2 $3` "Hours\n"
 				fi
 			done
 		else

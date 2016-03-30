@@ -19,3 +19,5 @@ alias shutdown='sudo shutdown -p now'
 
 # link the time tracker functionality
 . ~/dotfiles/scripts/time_tracker.ksh
+# link scratch function
+. ~/dotfiles/scripts/scratch.ksh

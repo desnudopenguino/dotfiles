@@ -8,6 +8,8 @@ function scratch {
 	else
 		mkdir ~/".scratch"
 	fi
+	~/dotfiles/scripts/box_down.expect $box_username $box_pass $session
 	vi ~/".scratch/$session.scr"
+	~/dotfiles/scripts/box_up.expect $box_username $box_pass $session
 }
 export scratch

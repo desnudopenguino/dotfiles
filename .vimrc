@@ -62,6 +62,9 @@ set splitright
 " turn off gitgutter grep color command for gitgutter
 let g:gitgutter_grep_command='grep -e'
 
+" encryption
+set cm=blowfish2
+
 """""""""""""""""""""""""""""""""""""""""""
 " Visuals
 """""""""""""""""""""""""""""""""""""""""""

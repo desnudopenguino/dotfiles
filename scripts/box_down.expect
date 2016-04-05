@@ -1,0 +1,19 @@
+#!/usr/local/bin/expect -f
+
+set user [lindex $argv 0]
+set pass [lindex $argv 1]
+set upFile [lindex $argv 2]
+
+spawn cadaver https://dav.box.com/dav
+expect "Username:"
+send $user\n
+expect "Password:"
+send $pass\n
+expect "dav:/dav/>"
+send "lcd /home/bucky/.scratch\n"
+expect "dav:/dav/>"
+send "cd .scratch\n"
+expect "dav:/dav/.scratch/>"
+send "get $upFile.scr $upFile.scr\n"
+expect "dav:/dav/.scratch/>"
+send "quit\n"

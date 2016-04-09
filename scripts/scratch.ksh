@@ -9,7 +9,7 @@ function scratch {
 		mkdir ~/".scratch"
 	fi
 	~/dotfiles/scripts/box_down.expect $box_username $box_pass $session
-	vi ~/".scratch/$session.scr"
+	vi ~/".scratch/$session.txt"
 	~/dotfiles/scripts/box_up.expect $box_username $box_pass $session
 }
 export scratch

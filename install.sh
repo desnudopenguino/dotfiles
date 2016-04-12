@@ -29,6 +29,7 @@ else
 	echo ".tmux/ already exists..."
 fi
 
+# .Xdefaults
 if [ ! -h ~/.Xdefaults ]; then
 	ln -sf `pwd`/.Xdefaults ~/.Xdefaults
 else

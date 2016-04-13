@@ -23,6 +23,8 @@ Plugin 'Lokaltog/vim-distinguished' "vim distinguished colorscheme
 Plugin 'onur/vim-motivate' "Motivational goodness!
 Plugin 'itchyny/lightline.vim' " Info line at bottom, more customizable than vim-airline
 Plugin 'lervag/vimtex' " Tex/LaTex plugin for making pretty outputs
+Plugin 'xolox/vim-misc' " Needed for vim-notes
+Plugin 'xolox/vim-notes' " Note taking format for my scratch stuff
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -64,6 +66,10 @@ let g:gitgutter_grep_command='grep -e'
 
 " encryption
 set cm=blowfish2
+
+" Notes settings
+let g:notes_directories = ['~/.scratch']
+let g:notes_suffix = '.txt'
 
 """""""""""""""""""""""""""""""""""""""""""
 " Visuals

@@ -17,6 +17,7 @@ alias tmn='tmux new -s'
 
 # Quick shutdown
 alias shutdown='sudo shutdown -p now'
+alias reboot='sudo reboot'
 
 # link the time tracker functionality
 . ~/dotfiles/scripts/time_tracker.ksh

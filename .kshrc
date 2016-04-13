@@ -3,7 +3,7 @@ export LC_CTYPE=en_US.UTF-8
 
 # change the cli line
 # export PS1='$(print -n "${PWD}\n$ ")'
-export PS1="`logname`@`hostname`/\${PWD##*/} \$ "
+export PS1="`logname`@`hostname -s`:${PWD##*/} \$ "
 
 # some aliases!
 alias ll='ls -laf'

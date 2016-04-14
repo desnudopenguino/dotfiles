@@ -354,6 +354,14 @@ function wl {
 				if [[ $arg == 'd' ]]; then
 					echo `dayLog $2 $3` "Hours\n"
 				fi
+
+				# edit it!
+				if [[ $arg == 'v' ]]; then
+					session=$(tmux list-pane -F '#S' | head -1)
+					date=$(date +"%d_%m_%y")
+					filename=~/"work_logs/$session-$date.csv"
+					vi $filename
+				fi
 			done
 		else
 			echo "First Argument must be a '-' followed by one or more flags"

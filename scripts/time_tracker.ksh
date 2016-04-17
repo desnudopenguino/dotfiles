@@ -362,6 +362,17 @@ function wl {
 					filename=~/"work_logs/$session-$date.csv"
 					vi $filename
 				fi
+
+				# (g)et from Box
+				if [[ $arg == 'g' ]]; then
+					echo "Get from Box"
+				fi
+
+				# (p)ush to Box
+				if [[ $arg == 'p' ]]; then
+					echo "Push to Box"
+				fi
+
 			done
 		else
 			echo "First Argument must be a '-' followed by one or more flags"

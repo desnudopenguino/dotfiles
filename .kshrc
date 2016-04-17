@@ -14,6 +14,7 @@ alias xl='xlock -visual TrueColor -mode random'
 alias tml='tmux ls'
 alias tma='tmux a -t'
 alias tmn='tmux new -s'
+alias tmk='tmux kill-session -t'
 
 # Quick shutdown
 alias shutdown='sudo shutdown -p now'

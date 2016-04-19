@@ -1,3 +1,5 @@
 .netrwhist
 *.log
 *.swp
+.vim/bundle/*
+

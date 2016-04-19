@@ -14,7 +14,7 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim' "Vim Bundler 
 Plugin 'tpope/vim-fugitive' " Git wrapper
-Plugin 'kien/ctrlp.vim' " Fuzzy search
+Plugin 'ctrlpvim/ctrlp.vim' " Fuzzy search
 Plugin 'kristijanhusak/vim-multiple-cursors' " Multiple cursors at once
 Plugin 'majutsushi/tagbar' " Tagbar for ctags
 Plugin 'ludovicchabant/vim-gutentags' " Autogenerate ctags for file
@@ -25,6 +25,7 @@ Plugin 'itchyny/lightline.vim' " Info line at bottom, more customizable than vim
 Plugin 'lervag/vimtex' " Tex/LaTex plugin for making pretty outputs
 Plugin 'xolox/vim-misc' " Needed for vim-notes
 Plugin 'xolox/vim-notes' " Note taking format for my scratch stuff
+Plugin 'ryanoasis/vim-devicons' " Pretty icons
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -35,6 +36,9 @@ filetype plugin indent on    " required
 """""""""""""""""""""""""""""""""""""""""""
 " Behaviors 
 """""""""""""""""""""""""""""""""""""""""""
+
+" Set font
+set guifont=Hack\ 10
 
 " UTF-8
 set encoding=utf-8

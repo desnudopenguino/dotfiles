@@ -366,11 +366,24 @@ function wl {
 				# (g)et from Box
 				if [[ $arg == 'g' ]]; then
 					echo "Get from Box"
+					if [[ $# -lt 2 ]]; then
+						session=$(tmux list-pane -F '#S' | head -1)
+						date=$(date +"%d_%m_%y")
+						filename="$session-$date.csv"
+					else
+						filename=$2
+					fi
+					~/dotfiles/scripts/box_down.expect $box_username $box_pass $filename work_logs
+					echo "\n"
 				fi
 
 				# (p)ush to Box
 				if [[ $arg == 'p' ]]; then
-					echo "Push to Box"
+					session=$(tmux list-pane -F '#S' | head -1)
+					date=$(date +"%d_%m_%y")
+					filename="$session-$date.csv"
+					~/dotfiles/scripts/box_up.expect $box_username $box_pass $filename work_logs
+					echo "\n"
 				fi
 
 			done

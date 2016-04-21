@@ -386,6 +386,18 @@ function wl {
 					echo "\n"
 				fi
 
+				# (a)rchive - add files to work_logs/.archive directory
+				if [[ $arg == 'a' ]]; then
+					session=$(tmux list-pane -F '#S' | head -1)
+					date=$(date +"%d_%m_%y")
+					filename="$session-$date.csv"
+					echo "Archiving $filename..."
+					current=~/"work_logs/$filename"
+					archive=~/"work_logs/.archive/"
+					mv $current $archive
+					~/dotfiles/scripts/box_up.expect $box_username $box_pass $filename work_logs/.archive
+					echo "\n"
+				fi
 			done
 		else
 			echo "First Argument must be a '-' followed by one or more flags"

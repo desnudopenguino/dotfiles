@@ -3,13 +3,20 @@
 
 function scratch {
 	session=$(tmux list-pane -F '#S' | head -1)
-	if [[ -d ~/".scratch" ]]; then
+	dir=".scratch"
+	if [[ -d ~/"$dir" ]]; then
 		echo "Scratch folder exists"
 	else
-		mkdir ~/".scratch"
+		mkdir ~/"$dir"
 	fi
-	~/dotfiles/scripts/box_down.expect $box_username $box_pass $session
-	vi note:$session
-	~/dotfiles/scripts/box_up.expect $box_username $box_pass $session
+	session=$session".txt"
+	~/dotfiles/scripts/box_down.expect $box_username $box_pass $session $dir
+OIFS=$IFS
+IFS='.'
+set -A filename $session
+IFS=$OIFS
+	vi note:${filename[0]}
+	~/dotfiles/scripts/box_up.expect $box_username $box_pass $session $dir
+	echo "\n"
 }
 export scratch

@@ -25,4 +25,4 @@ alias reboot='sudo reboot'
 # link scratch function
 . ~/dotfiles/scripts/scratch.ksh
 # link shortcut encription functionality
-. ~/dotfiles/scripts/encript.ksh
+. ~/dotfiles/scripts/encrypt.ksh

@@ -24,3 +24,5 @@ alias reboot='sudo reboot'
 . ~/dotfiles/scripts/time_tracker.ksh
 # link scratch function
 . ~/dotfiles/scripts/scratch.ksh
+# link shortcut encription functionality
+. ~/dotfiles/scripts/encript.ksh

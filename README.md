@@ -18,13 +18,14 @@ tmux source ~/.tmux.conf
 
 Dependencies (and goodies used):
 feh (for setting the background)
-Hack Font
-FontAwesome Font
 i3 (tiled WM)
 Fluxbox (another WM)
 Vim (text editer)
 tmux (terminal multiplexer)
 urxvt (terminal)
 pcmanfm (file manager)
+cadaver (dav CLI client)
+git (of course!)
+expect (automated CLI tool for in-program interaction)
 
 NOTE: Make sure you have a full color term if you are planning on using 256-color stuff!

@@ -71,3 +71,14 @@ git submodule update --init
 echo "Installing Vim Plugins..."
 # install vim scripts
 vim +PluginInstall +qall 
+
+
+# soft link fonts directory (.fonts/)
+if [ ! -h ~/.fonts ]; then
+	ln -sf `pwd`/.fonts ~/.fonts
+else
+	echo ".fonts/ already exists..."
+fi
+echo "Installing fonts...\n"
+/usr/X11R6/bin/fc-cache -v
+xset fp rehash

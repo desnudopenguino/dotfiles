@@ -10,6 +10,6 @@
 	path = .fluxbox/styles/mediterranean-darkest
 	url = https://github.com/desnudopenguino/mediterranean-darkest
 
-[submodule "powerline-fonts"]
+[submodule ".fonts"]
 	path = .fonts
-	url = https://github.com/powerline/fonts
+	url = https://github.com/powerline/fonts.git

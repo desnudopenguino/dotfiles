@@ -373,7 +373,7 @@ function wl {
 					else
 						filename=$2
 					fi
-					~/dotfiles/scripts/box_down.expect $box_username $box_pass $filename work_logs
+					~/dotfiles/scripts/box_down.expect $box_user $box_pass $filename work_logs
 					echo "\n"
 				fi
 
@@ -382,7 +382,7 @@ function wl {
 					session=$(tmux list-pane -F '#S' | head -1)
 					date=$(date +"%d_%m_%y")
 					filename="$session-$date.csv"
-					~/dotfiles/scripts/box_up.expect $box_username $box_pass $filename work_logs
+					~/dotfiles/scripts/box_up.expect $box_user $box_pass $filename work_logs
 					echo "\n"
 				fi
 
@@ -395,7 +395,11 @@ function wl {
 					current=~/"work_logs/$filename"
 					archive=~/"work_logs/.archive/"
 					mv $current $archive
-					~/dotfiles/scripts/box_up.expect $box_username $box_pass $filename work_logs/.archive
+					~/dotfiles/scripts/box_up.expect $box_user $box_pass $filename work_logs/.archive
+					echo "Cleaning up other $session logs..."
+					rm -i ~/work_logs/$session*
+					~/dotfiles/scripts/box_delete.expect $box_user $box_pass $session work_logs/
+
 					echo "\n"
 				fi
 			done

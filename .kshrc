@@ -20,6 +20,9 @@ alias tmk='tmux kill-session -t'
 alias shutdown='sudo shutdown -p now'
 alias reboot='sudo reboot'
 
+# Quick brows usenig feh
+alias fehb='feh -g 640x480 -d -S filename'
+
 # link the time tracker functionality
 . ~/dotfiles/scripts/time_tracker.ksh
 # link scratch function

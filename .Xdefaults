@@ -71,19 +71,19 @@ XTerm*loginShell:true
 XTerm*termName: xterm-256color
 XTerm*faceName: Hack
 
-! urxvw settings
-urxvt*loginShell: true
-urxvt*termName: rxvt-unicode-256color
-urxvt*font: xft:Hack
-urxvt*scrollBar: false
-!urxvt*background: black
-!urxvt*foreground: gray
-urxvt*saveLines: 100000
-!urxvt.borderLess: true
-urxvt*internalBorder: 0
-urxvt*externalBorder: 0
-urxvt*cursorBlink: true
+! URxvw settings
+URxvt*loginShell: true
+URxvt*termName: rxvt-unicode-256color
+URxvt*font: xft:Hack
+URxvt*scrollBar: false
+!URxvt*background: black
+!URxvt*foreground: gray
+URxvt*saveLines: 100000
+!URxvt.borderLess: true
+URxvt*internalBorder: 0
+URxvt*externalBorder: 0
+URxvt*cURsorBlink: true
 
 ! transparency
-urxvt*transparent: true
-urxvt*shading: 20 
+URxvt*transparent: true
+URxvt*shading: 20 

@@ -71,6 +71,13 @@ else
 	echo ".fonts/ already exists..."
 fi
 
+# soft link session settings (.xsession)
+if [ ! -h ~/.xsession ]; then
+	ln -sf `pwd`/.xsession ~/.xsession
+else 
+	echo ".xsession already exists..."
+fi
+
 echo "Downloading Submodules..."
 # download the submodules
 git submodule update --init

@@ -23,6 +23,9 @@ alias reboot='sudo reboot'
 # Quick brows usenig feh
 alias fehb='feh -g 640x480 -d -S filename'
 
+# Quick connect to box via cadaver
+alias box='cadaver https://dav.box.com/dav/'
+
 # link the time tracker functionality
 . ~/dotfiles/scripts/time_tracker.ksh
 # link scratch function

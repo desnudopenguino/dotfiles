@@ -26,6 +26,8 @@ Plugin 'lervag/vimtex' " Tex/LaTex plugin for making pretty outputs
 Plugin 'xolox/vim-misc' " Needed for vim-notes
 Plugin 'xolox/vim-notes' " Note taking format for my scratch stuff
 Plugin 'ryanoasis/vim-devicons' " Pretty icons
+Plugin 'tpope/vim-rails' " Rails plugin
+Plugin 'tpope/vim-vinegar' " Plugin to help with netrw
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

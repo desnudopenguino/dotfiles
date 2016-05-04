@@ -89,3 +89,6 @@ vim +PluginInstall +qall
 echo "Installing fonts...\n"
 /usr/X11R6/bin/fc-cache -v
 xset fp rehash
+
+echo "Sourcing .kshrc...\n"
+. .kshrc

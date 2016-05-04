@@ -10,13 +10,13 @@ function scratch {
 		mkdir ~/"$dir"
 	fi
 	session=$session".txt"
-	~/dotfiles/scripts/box_down.expect $box_user $box_pass $session $dir
+	~/dotfiles/scripts/box_down.expect $session $dir
 OIFS=$IFS
 IFS='.'
 set -A filename $session
 IFS=$OIFS
 	vi note:${filename[0]}
-	~/dotfiles/scripts/box_up.expect $box_user $box_pass $session $dir
+	~/dotfiles/scripts/box_up.expect $session $dir
 	echo "\n"
 }
 export scratch

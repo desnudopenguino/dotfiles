@@ -1,5 +1,5 @@
 # allow for the powerline icons
-export LC_CTYPE=en_US.UTF-8 
+export LANG="en_US.UTF-8"
 
 # change the cli line
 # export PS1='$(print -n "${PWD}\n$ ")'

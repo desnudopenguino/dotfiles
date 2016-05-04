@@ -1,7 +1,7 @@
 #!/usr/local/bin/expect -f
 
-set upFile [lindex $argv 2]
-set dir [lindex $argv 3]
+set upFile [lindex $argv 0]
+set dir [lindex $argv 1]
 
 spawn cadaver https://dav.box.com/dav
 expect "dav:/dav/>"

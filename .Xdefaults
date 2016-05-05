@@ -76,14 +76,14 @@ URxvt*loginShell: true
 URxvt*termName: rxvt-unicode-256color
 URxvt*font: xft:Hack
 URxvt*scrollBar: false
-!URxvt*background: black
-!URxvt*foreground: gray
 URxvt*saveLines: 100000
-!URxvt.borderLess: true
 URxvt*internalBorder: 0
 URxvt*externalBorder: 0
 URxvt*cURsorBlink: true
-
 ! transparency
 URxvt*transparent: true
 URxvt*shading: 20 
+! clickable links!
+URxvt.perl-ext-common: default,matcher
+URxvt.url-launcher: firefox
+URxvt.matcher.button: 1

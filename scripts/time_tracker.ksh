@@ -338,6 +338,7 @@ function wl {
 				if [[ $arg == 'f' ]]; then
 					#echo $2
 					stopLog "$2"
+					wl -p
 				fi
 
 				# get current work block time
@@ -361,6 +362,7 @@ function wl {
 					date=$(date +"%d_%m_%y")
 					filename=~/"work_logs/$session-$date.csv"
 					vi $filename
+					wl -p
 				fi
 
 				# (g)et from Box

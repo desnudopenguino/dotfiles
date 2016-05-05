@@ -157,8 +157,8 @@ noremap <down> <nop>
 " use ;q to replace escape and save (nice on dvorak, and mapped with ; as :)
 inoremap ;q <esc>:w<CR>
 
-" ;; to escape from insert to normal mode without saving
-inoremap ;; <esc>
+" ;j to escape from insert to normal mode without saving
+inoremap ;j <esc>
 
 " reload .vimrc
 noremap ;r :source ~/.vimrc<CR>

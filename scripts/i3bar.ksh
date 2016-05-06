@@ -11,9 +11,10 @@ do
 	media=`ifconfig $i | grep 'media'|  cut -d : -f 2 | cut -d ' ' -f 2`
 	if [[ -n $active ]]; then
 	if [[ $media == "Ethernet" ]]; then
-		media_type=`ifconfig $i | grep 'media' | cut -d \( -f 2 | cut -d ' ' -f 1`
+#		media_type=`ifconfig $i | grep 'media' | cut -d \( -f 2 | cut -d ' ' -f 1`
 		media_ip=`ifconfig $i | grep 'inet' | cut -d ' ' -f 2`
-		net_output="$net_output   $media_ip $media_type"
+#		net_output="$net_output   $media_ip $media_type"
+		net_output="$net_output   $media_ip"
 	elif [[ $media == "IEEE802.11" ]]; then
 		wifi_ssid=`ifconfig $i | grep ieee80211 | cut -d ' ' -f 3`
 		wifi_power=`ifconfig $i | grep ieee80211 | cut -d ' ' -f 8`

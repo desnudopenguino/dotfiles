@@ -189,6 +189,9 @@ export calculateSeconds
 function currentLog {
 start=`getStart`
 now=`date +"%H:%M"`
+if [[ "$now" == 0* ]]; then
+	now=${now#?}
+fi
 duration=`calculateDuration $start $now`
 printf "Start:\tNow:\tTime Worked:\n$start\t$now\t$duration\n"
 }
@@ -360,7 +363,7 @@ function wl {
 					session=$(tmux list-pane -F '#S' | head -1)
 					date=$(date +"%d_%m_%y")
 					filename=~/"work_logs/$session-$date.csv"
-					vi $filename
+					vi +'set noeol' +'set binary' $filename
 				fi
 
 				# (g)et from Box

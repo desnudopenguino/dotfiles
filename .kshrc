@@ -32,3 +32,5 @@ alias box='cadaver https://dav.box.com/dav/'
 . ~/dotfiles/scripts/scratch.ksh
 # link shortcut encription functionality
 . ~/dotfiles/scripts/encrypt.ksh
+# link wifi function
+. ~/dotfiles/scripts/wifi.sh

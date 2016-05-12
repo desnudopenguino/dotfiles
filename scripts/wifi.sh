@@ -1,20 +1,22 @@
-#!/bin/sh
+#!/bin/ksh
+# function to quickly list connections and connect to them 
 
-# function to quickly list connections and connect to them
 function wifi {
-	if [ $1 -eq "ls" ]; then
-		if [ -z $2 ]; then
-			sudo ifconfig rtwn0 scan | grep $2
-		else
+	if [[ $1 == "ls" ]]; then
 			sudo ifconfig rtwn0 scan
-		fi
-	elif [ $1 -eq "con" ]; then
-		if [ -z $3 ]; then
-			sudo ifconfig rtwn0 nwid "$2" wpakey $3
-		elif [ -z $2 ]; then
+	elif [[ $1 == "con" ]]; then
+		if [[ -z $3 ]]; then
+			echo sudo ifconfig rtwnr nwid "$2"
 			sudo ifconfig rtwnr nwid "$2"
+		else
+			echo sudo ifconfig rtwn0 nwid "$2" wpakey $3
+			sudo ifconfig rtwn0 nwid "$2" wpakey $3
 		fi
 		sudo dhclient rtwn0
+	elif [[ $1 == "down" ]]; then
+		sudo ifconfig rtwn0 down
+	elif [[ $1 == "up" ]]; then
+		sudo ifconfig rtwn0 up
 	fi
 }
 export wifi

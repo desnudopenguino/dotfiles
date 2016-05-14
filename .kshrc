@@ -27,7 +27,7 @@ alias fehb='feh -g 640x480 -d -S filename'
 alias box='cadaver https://dav.box.com/dav/'
 
 # link the time tracker functionality
-. ~/dotfiles/scripts/time_tracker.ksh
+. ~/dotfiles/scripts/work_logger.ksh
 # link scratch function
 . ~/dotfiles/scripts/scratch.ksh
 # link shortcut encription functionality

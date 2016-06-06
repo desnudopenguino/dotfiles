@@ -20,11 +20,14 @@ alias tmk='tmux kill-session -t'
 alias shutdown='sudo shutdown -p now'
 alias reboot='sudo reboot'
 
-# Quick brows usenig feh
+# Quick browse usenig feh
 alias fehb='feh -g 640x480 -d -S filename'
 
 # Quick connect to box via cadaver
 alias box='cadaver https://dav.box.com/dav/'
+
+# Quick bundle install
+alias binstall='bundle install --path=~/.gem'
 
 # link the time tracker functionality
 . ~/dotfiles/scripts/time_tracker.ksh

@@ -78,6 +78,13 @@ else
 	echo ".xsession already exists..."
 fi
 
+# soft link xmodmaprc settings (.xmodmaprc)
+if [ ! -h ~/.xmodmaprc ]; then
+	ln -sf `pwd`/.xmodmaprc ~/.xmodmaprc
+else 
+	echo ".xmodmaprc already exists..."
+fi
+
 echo "Downloading Submodules..."
 # download the submodules
 git submodule update --init
@@ -89,6 +96,3 @@ vim +PluginInstall +qall
 echo "Installing fonts...\n"
 /usr/X11R6/bin/fc-cache -v
 xset fp rehash
-
-echo "Sourcing .kshrc...\n"
-. .kshrc

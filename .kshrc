@@ -5,6 +5,8 @@ export LANG="en_US.UTF-8"
 # export PS1='$(print -n "${PWD}\n$ ")'
 export PS1='`logname`@`hostname -s`:$(print -n "${PWD##*/}/")\$ '
 
+set -o vi
+
 # some aliases!
 alias ll='ls -laf'
 alias vi='vim'
@@ -30,7 +32,7 @@ alias box='cadaver https://dav.box.com/dav/'
 alias binstall='bundle install --path=~/.gem'
 
 # link the time tracker functionality
-. ~/dotfiles/scripts/time_tracker.ksh
+. ~/dotfiles/scripts/work_logger.ksh
 # link scratch function
 . ~/dotfiles/scripts/scratch.ksh
 # link shortcut encription functionality

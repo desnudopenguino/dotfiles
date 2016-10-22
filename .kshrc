@@ -3,7 +3,7 @@ export LANG="en_US.UTF-8"
 
 # change the cli line
 # export PS1='$(print -n "${PWD}\n$ ")'
-export PS1='`logname`@`hostname -s`:$(print -n "${PWD##*/}/")\$ '
+export PS1="\u@\h:\w$ "
 
 set -o vi
 
@@ -19,8 +19,8 @@ alias tmn='tmux new -s'
 alias tmk='tmux kill-session -t'
 
 # Quick shutdown
-alias shutdown='sudo shutdown -p now'
-alias reboot='sudo reboot'
+alias shutdown='doas -u root shutdown -p now'
+alias reboot='doas -u root reboot'
 
 # Quick browse usenig feh
 alias fehb='feh -g 640x480 -d -S filename'

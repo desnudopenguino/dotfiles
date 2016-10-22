@@ -332,6 +332,11 @@ function wl {
 					newLog $2
 				fi
 
+				# Time for other log file
+				if [[ $arg == "t" ]]; then
+					getTime $2
+				fi
+
 				# start the log
 				if [[ $arg == 's' ]]; then
 					startLog

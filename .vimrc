@@ -39,6 +39,10 @@ filetype plugin indent on    " required
 " Behaviors 
 """""""""""""""""""""""""""""""""""""""""""
 
+" netrw
+let g:netrw_liststyle = 3
+let g:netrw_banner = 1
+
 " Set font
 set guifont=Hack\ 10
 

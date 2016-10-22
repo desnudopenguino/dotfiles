@@ -1,0 +1,84 @@
+# Conky, a system monitor, based on torsmo
+#
+# Any original torsmo code is licensed under the BSD license
+#
+# All code written since the fork of torsmo is licensed under the GPL
+#
+# Please see COPYING for details
+#
+# Copyright (c) 2004, Hannu Saransaari and Lauri Hakkarainen
+# Copyright (c) 2005-2010 Brenden Matthews, Philip Kovacs, et. al. (see AUTHORS)
+# All rights reserved.
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+
+alignment bottom_middle
+# background yes 
+background no
+#was no ^
+#border_width 1
+border_width 3
+cpu_avg_samples 2
+default_color white
+default_outline_color white
+default_shade_color white
+#draw_borders no
+border_inner_margin 3
+border_outer_margin 2
+draw_graph_borders yes
+draw_outline no
+draw_shades no
+use_xft yes
+xftfont Hack :bold:size=11
+gap_x 0 
+gap_y 5
+net_avg_samples 2
+#no_buffers yes
+double_buffer yes
+out_to_console no
+extra_newline no
+own_window yes
+own_window_type normal
+own_window_transparent no
+#own_window_colour FFBF00
+#own_window_colour 3A73A5
+own_window_colour 000000
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+minimum_size 220 5
+maximum_width 1920
+#own_window_class Conky
+#own_window_type desktop
+update_interval 1.0
+uppercase no
+use_spacer none
+show_graph_scale no
+show_graph_range no
+#color1 FFBF00
+color1 6C3953
+color4 396C53
+color3 536C39
+color2 39536C
+color5 FFFFFF
+# Unused text
+# ${color1}[swap ${swap}]${color} \
+# ${color1}[up: ${uptime}]${color} \
+# ${color1}[charge: ${apm_battery_life}]${color} \
+# ${color4}[${fs_free /home} free]${color} \
+# ${color1}    [ OpenBSD ${kernel} ] ${color} \
+
+TEXT
+${color1}[ ${addr em0} ] Rx ${downspeedf em0} ${downspeedgraph em0 7,45} Tx ${upspeedf em0} ${upspeedgraph em0 7,45}${color} \
+${color2}[ CPU ] ${cpubar 7,90}${color} \
+${color3}[ RAM ] ${membar 7,90}${color} \
+${color4}[ ${time %D %H:%M} ]${font}    \

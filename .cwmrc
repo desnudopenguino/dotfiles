@@ -1,0 +1,66 @@
+# C = Control
+# M = Meta (alt) key
+# S = Shift key
+# 4 = Mod4 (windows) key
+
+# Default variables set here
+borderwidth 5
+snapdist 20
+gap 10 35 10 10
+tilegap 10
+moveamount 5
+
+# COLORS!
+color activeborder '#396C53'
+color inactiveborder '#22282d'
+
+# Actions
+bind MC-r	restart
+bind MC-q	quit
+bind M-Return urxvt
+bind MC-l lock
+bind M-e exec
+bind M-E exec_wm
+bind M-u menusearch
+bind M-/ search
+bind M-g groupsearch
+
+# Movement
+bind M-h moveleft
+bind M-l moveright
+bind M-k moveup
+bind M-j movedown
+
+bind M-H bigmoveleft
+bind M-L bigmoveright
+bind M-K bigmoveup
+bind M-J bigmovedown
+
+bind M-M maximize
+bind M-m hide
+bind M-u menu_unhide
+
+# 4 (win) key is for grouping!
+bind 4-1 group 1
+bind 4-2 group 2
+bind 4-3 group 3
+bind 4-4 group 4
+bind 4-5 group 5
+bind 4-6 group 6
+bind 4-7 group 7
+bind 4-8 group 8
+bind 4-9 group 9
+bind 4-0 nogroup
+
+bind 4S-1 grouponly 1
+bind 4S-2 grouponly 2
+bind 4S-3 grouponly 3
+bind 4S-4 grouponly 4
+bind 4S-5 grouponly 5
+bind 4S-6 grouponly 6
+bind 4S-7 grouponly 7
+bind 4S-8 grouponly 8
+bind 4S-9 grouponly 9
+
+bind 4-l cyclegroup
+bind 4-h rcyclegroup

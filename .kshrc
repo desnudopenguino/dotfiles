@@ -3,7 +3,7 @@ export LANG="en_US.UTF-8"
 
 # change the cli line
 # export PS1='$(print -n "${PWD}\n$ ")'
-export PS1='\033[1;36m\u\033[1;32m@\033[1;33m\h\033[1;34m:\033[1;35m\w\033[1;37m$ \033[1;00m'
+export PS1='\u@\h:\w$ '
 
 set -o vi
 

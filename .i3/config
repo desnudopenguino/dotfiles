@@ -244,4 +244,7 @@ exec /usr/local/bin/urxvt
 # exec i3-msg 'workspace $ws3 ; exec thunderbird'
 # exec i3-msg 'workspace $ws10 ; exec urxvt -e cmus'
 
+#exec --no-startup-id xautolock -time 1 -locker lock
+
+
 exec compton -f

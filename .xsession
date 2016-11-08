@@ -1,3 +1,3 @@
 export LANG=en_US.UTF-8
 xmodmap ~/.xmodmaprc
-/usr/local/bin/i3
+/usr/X11R6/bin/cwm

@@ -78,7 +78,7 @@ color5 FFFFFF
 # ${color1}    [ OpenBSD ${kernel} ] ${color} \
 
 TEXT
-${color1}[ ${addr em0} ] Rx ${downspeedf em0} ${downspeedgraph em0 7,45} Tx ${upspeedf em0} ${upspeedgraph em0 7,45}${color} \
+${color1}[ ${addr em0} ] RX ${downspeedf em0} ${downspeedgraph em0 7,45} TX ${upspeedf em0} ${upspeedgraph em0 7,45}${color} \
 ${color2}[ CPU ] ${cpubar 7,90}${color} \
 ${color3}[ RAM ] ${membar 7,90}${color} \
 ${color4}[ ${time %D %H:%M} ]${font}    \

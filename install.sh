@@ -85,6 +85,20 @@ else
 	echo ".xmodmaprc already exists..."
 fi
 
+# soft link cwmrc settings (.cwmrc)
+if [ ! -h ~/.cwmrc ]; then
+	ln -sf `pwd`/.cwmrc ~/.cwmrc
+else 
+	echo ".cwmrc already exists..."
+fi
+
+# soft link conkyrc settings (.conkyrc)
+if [ ! -h ~/.conkyrc ]; then
+	ln -sf `pwd`/.conkyrc ~/.conkyrc
+else 
+	echo ".conkyrc already exists..."
+fi
+
 echo "Downloading Submodules..."
 # download the submodules
 git submodule update --init

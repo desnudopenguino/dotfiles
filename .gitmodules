@@ -6,10 +6,7 @@
 	path = .vim/bundle/Vundle.vim
 	url = https://github.com/VundleVim/Vundle.vim
 
-[submodule "mediterranean-darkest"]
-	path = .fluxbox/styles/mediterranean-darkest
-	url = https://github.com/desnudopenguino/mediterranean-darkest
-
 [submodule ".fonts/powerline"]
 	path = .fonts/powerline
 	url = http://github.com/powerline/fonts
+

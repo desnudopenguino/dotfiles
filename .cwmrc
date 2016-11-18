@@ -37,6 +37,7 @@ bind M-K bigmoveup
 bind M-J bigmovedown
 
 bind M-M maximize
+bind MC-m fullscreen
 bind M-m hide
 bind M-u menu_unhide
 

@@ -31,8 +31,6 @@ alias box='cadaver https://dav.box.com/dav/'
 # Quick bundle install
 alias binstall='bundle install --path=~/.gem'
 
-# link the time tracker functionality
-. ~/dotfiles/scripts/work_logger.ksh
 # link scratch function
 . ~/dotfiles/scripts/scratch.ksh
 # link shortcut encription functionality

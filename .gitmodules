@@ -9,3 +9,7 @@
 [submodule ".fonts/powerline"]
 	path = .fonts/powerline
 	url = http://github.com/powerline/fonts
+
+[submodule ".tmux-colors-solarized"]
+	path = .tmux/plugins/tmux-colors-solarized
+	url = http://github.com/seebi/tmux-colors-solarized

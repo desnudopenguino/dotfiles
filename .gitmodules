@@ -9,4 +9,3 @@
 [submodule ".fonts/powerline"]
 	path = .fonts/powerline
 	url = http://github.com/powerline/fonts
-

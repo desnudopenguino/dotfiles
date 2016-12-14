@@ -25,6 +25,9 @@ bind M-u menusearch
 bind M-/ search
 bind M-g groupsearch
 
+bind CM-h htile
+bind CM-v vtile
+
 # Movement
 bind M-h moveleft
 bind M-l moveright
@@ -40,6 +43,10 @@ bind M-M maximize
 bind MC-m fullscreen
 bind M-m hide
 bind M-u menu_unhide
+bind M-d delete
+bind M-r raise
+bind M4-l label
+bind M-o lower
 
 # 4 (win) key is for grouping!
 bind 4-1 group 1
@@ -63,5 +70,16 @@ bind 4S-7 grouponly 7
 bind 4S-8 grouponly 8
 bind 4S-9 grouponly 9
 
+bind SC-1 movetogroup 1
+bind SC-2 movetogroup 2
+bind SC-3 movetogroup 3
+bind SC-4 movetogroup 4
+bind SC-5 movetogroup 5
+bind SC-6 movetogroup 6
+bind SC-7 movetogroup 7
+bind SC-8 movetogroup 8
+bind SC-9 movetogroup 9
+
 bind 4-l cyclegroup
 bind 4-h rcyclegroup
+

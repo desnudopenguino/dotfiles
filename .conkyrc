@@ -59,7 +59,7 @@ minimum_size 220 5
 maximum_width 1920
 #own_window_class Conky
 #own_window_type desktop
-update_interval 1.0
+update_interval 0.05
 uppercase no
 use_spacer none
 show_graph_scale no
@@ -77,8 +77,9 @@ color5 FFFFFF
 # ${color4}[${fs_free /home} free]${color} \
 # ${color1}    [ OpenBSD ${kernel} ] ${color} \
 
+# ${color1}[ ${addr em0} ] RX ${downspeedf em0} ${downspeedgraph em0 7,45} TX ${upspeedf em0} ${upspeedgraph em0 7,45}${color} \
 TEXT
-${color1}[ ${addr em0} ] RX ${downspeedf em0} ${downspeedgraph em0 7,45} TX ${upspeedf em0} ${upspeedgraph em0 7,45}${color} \
+${color1}[ ${addr em0} ] RX ${downspeedgraph em0 7,90} TX ${upspeedgraph em0 7,90}${color} \
 ${color2}[ CPU ] ${cpubar 7,90}${color} \
 ${color3}[ RAM ] ${membar 7,90}${color} \
-${color4}[ ${time %D %H:%M:%S} ]${font}    \
+${color4}[ ${time %D %H:%M:%S} ]${font} \

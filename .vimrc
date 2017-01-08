@@ -87,7 +87,7 @@ let g:notes_suffix = '.txt'
 
 " Set tabs to 2 spaces
 set tabstop=2
-set shiftwidth=2
+set shiftwidth=2 expandtab
 
 " show tabs, nbsp, and tabs
 exec "set listchars=tab:\uBB\uBB,trail:\uB7"

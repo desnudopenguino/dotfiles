@@ -65,11 +65,11 @@ use_spacer none
 show_graph_scale no
 show_graph_range no
 #color1 FFBF00
-color1 6C3953
-color4 396C53
-color3 536C39
-color2 39536C
-color5 FFFFFF
+color1 003377
+color2 225599
+color3 4477BB
+color4 6699DD
+color5 88BBFF
 # Unused text
 # ${color1}[swap ${swap}]${color} \
 # ${color1}[up: ${uptime}]${color} \
@@ -79,7 +79,4 @@ color5 FFFFFF
 
 # ${color1}[ ${addr em0} ] RX ${downspeedf em0} ${downspeedgraph em0 7,45} TX ${upspeedf em0} ${upspeedgraph em0 7,45}${color} \
 TEXT
-${color1}[ ${addr em0} ] RX ${downspeedgraph em0 7,90} TX ${upspeedgraph em0 7,90}${color} \
-${color2}[ CPU ] ${cpubar 7,90}${color} \
-${color3}[ RAM ] ${membar 7,90}${color} \
-${color4}[ ${time %D %H:%M:%S} ]${font} \
+${color1}[ ${addr rtwn0} ] RX ${downspeedgraph rtwn0 7,90} TX ${upspeedgraph rtwn0 7,90} ${color2}[ CPU ] 1:${cpubar cpu0 7,90} 2:${cpubar cpu1 7,90} ${color3}[ RAM ] ${membar 7,90} ${color4}[ ${time %D %H:%M:%S} ]

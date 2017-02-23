@@ -40,8 +40,8 @@ draw_graph_borders yes
 draw_outline no
 draw_shades no
 use_xft yes
-xftfont Hack :bold:size=11
-gap_x 0 
+xftfont Hack :bold:size=12
+gap_x 0
 gap_y 5
 net_avg_samples 2
 #no_buffers yes
@@ -56,20 +56,21 @@ own_window_transparent no
 own_window_colour 000000
 own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
 minimum_size 220 5
-maximum_width 1920
+#maximum_width 1920
 #own_window_class Conky
 #own_window_type desktop
-update_interval 1.0
+update_interval 0.05
 uppercase no
 use_spacer none
 show_graph_scale no
 show_graph_range no
 #color1 FFBF00
-color1 6C3953
-color4 396C53
-color3 536C39
-color2 39536C
-color5 FFFFFF
+color1 003377
+color2 225599
+color3 4477BB
+color4 6699DD
+color5 88BBFF
+color6 FFFFFF
 # Unused text
 # ${color1}[swap ${swap}]${color} \
 # ${color1}[up: ${uptime}]${color} \
@@ -77,8 +78,11 @@ color5 FFFFFF
 # ${color4}[${fs_free /home} free]${color} \
 # ${color1}    [ OpenBSD ${kernel} ] ${color} \
 
+# ${color1}[ ${addr re0} ] RX ${downspeedgraph re0 7,45} TX ${upspeedgraph re0 7,45} \
+# ${color2} ${execp sysctl | grep 'km0.temp0' | awk -F '=' '{ print $2 }' | awk '{ print $1 }' } \
 TEXT
-${color1}[ ${addr em0} ] RX ${downspeedf em0} ${downspeedgraph em0 7,45} TX ${upspeedf em0} ${upspeedgraph em0 7,45}${color} \
-${color2}[ CPU ] ${cpubar 7,90}${color} \
-${color3}[ RAM ] ${membar 7,90}${color} \
-${color4}[ ${time %D %H:%M:%S} ]${font}    \
+${color1}[${addr iwm0}] RX${downspeedgraph iwm0 7,45} TX${upspeedgraph iwm0 7,45} \
+${color2}[CPU]${cpubar cpu0 7,45}${cpubar cpu1 7,45}${cpubar cpu2 7,45}${cpubar cpu3 7,45} \
+${color3}[RAM]${membar 7,90} \
+${color4}[BAT]${apm_battery_time}(${apm_battery_life}) \
+${color5}[${time %D %H:%M:%S}]${font} \

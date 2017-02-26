@@ -19,7 +19,8 @@ Plugin 'kristijanhusak/vim-multiple-cursors' " Multiple cursors at once
 Plugin 'majutsushi/tagbar' " Tagbar for ctags
 Plugin 'ludovicchabant/vim-gutentags' " Autogenerate ctags for file
 Plugin 'airblade/vim-gitgutter' " Gutter notifications for git diff
-Plugin 'Lokaltog/vim-distinguished' "vim distinguished colorscheme
+"Plugin 'Lokaltog/vim-distinguished' "vim distinguished colorscheme
+Plugin 'w0ng/vim-hybrid' " vim-hybrid colorscheme
 Plugin 'onur/vim-motivate' "Motivational goodness!
 Plugin 'itchyny/lightline.vim' " Info line at bottom, more customizable than vim-airline
 Plugin 'lervag/vimtex' " Tex/LaTex plugin for making pretty outputs
@@ -87,7 +88,7 @@ let g:notes_suffix = '.txt'
 
 " Set tabs to 2 spaces
 set tabstop=2
-set shiftwidth=2
+set shiftwidth=2 expandtab
 
 " show tabs, nbsp, and tabs
 exec "set listchars=tab:\uBB\uBB,trail:\uB7"
@@ -108,7 +109,9 @@ au FileType css setl ofu=csscomplete#CompleteCSS
 
 " set the color scheme
 if &term =~ "xterm-256color" || &term =~ "rxvt-unicode-256color" || &term =~ "screen-256color"
-	color distinguished
+  set background=dark
+	"color distinguished
+  colorscheme hybrid
 endif
 
 " set relative number with actual line number (hybrid numbers) 

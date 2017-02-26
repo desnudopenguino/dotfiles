@@ -16,6 +16,7 @@ all:
 	@if [ ! -h ~/.xsession ]; then ln -sf `pwd`/.xsession ~/.xsession; fi
 	@if [ ! -h ~/.xmodmaprc ]; then ln -sf `pwd`/.xmodmaprc ~/.xmodmaprc; fi
 	@if [ ! -h ~/.cwmrc ]; then ln -sf `pwd`/.cwmrc ~/.cwmrc; fi
+	@if [ ! -h ~/.conkyrc ]; then ln -sf `pwd`/.conkyrc ~/.conkyrc; fi
 	@echo "Installing Git Submodules"
 	@git submodule update --init
 	@echo "Installing Vim Plugins"

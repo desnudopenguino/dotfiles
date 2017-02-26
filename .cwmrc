@@ -3,65 +3,125 @@
 # S = Shift key
 # 4 = Mod4 (windows) key
 
-# Default variables set here
-borderwidth 5
-snapdist 20
-gap 10 35 10 10
-tilegap 10
-moveamount 5
+# Unset all bindings
+unbind-key all
+unbind-mouse all
 
-# COLORS!
-color activeborder '#396C53'
-color inactiveborder '#22282d'
+# Default variables
+borderwidth 5
+color activeborder  '#4477bb'
+color font          '#4477bb'
+color selfont       '#88bbff'
+color groupborder   '#44bb77'
+color inactiveborder'#222222'
+color menubg        '#000000'
+color menufg        '#000000'
+color urgencyborder '#ff4400'
+color ungroupborder '#ffcc00'
+command terminal urxvtc
+fontname  "Hack:style=Bold,pixelsize=18"
+gap 5 20 5 5
+ignore Conky
+moveamount 10
+snapdist 40
+sticky yes
 
 # Actions
-bind MC-r	restart
-bind MC-q	quit
-bind M-Return urxvt
+bind MC-r restart
+bind MC-q quit
+bind MC-Return urxvtc # bind terminal
 bind MC-l lock
-bind M-e exec
-bind M-E exec_wm
-bind M-u menusearch
 bind M-/ search
+bind M-u menusearch
 bind M-g groupsearch
+bind M-e exec
+bind M-w exec_wm
+bind M-s ssh
 
-# Movement
-bind M-h moveleft
-bind M-l moveright
-bind M-k moveup
-bind M-j movedown
-
-bind M-H bigmoveleft
-bind M-L bigmoveright
-bind M-K bigmoveup
-bind M-J bigmovedown
-
-bind M-M maximize
-bind MC-m fullscreen
-bind M-m hide
-bind M-u menu_unhide
-
-# 4 (win) key is for grouping!
-bind 4-1 group 1
-bind 4-2 group 2
-bind 4-3 group 3
-bind 4-4 group 4
-bind 4-5 group 5
-bind 4-6 group 6
-bind 4-7 group 7
-bind 4-8 group 8
-bind 4-9 group 9
-bind 4-0 nogroup
-
-bind 4S-1 grouponly 1
-bind 4S-2 grouponly 2
-bind 4S-3 grouponly 3
-bind 4S-4 grouponly 4
-bind 4S-5 grouponly 5
-bind 4S-6 grouponly 6
-bind 4S-7 grouponly 7
-bind 4S-8 grouponly 8
+# Groups
+bind 4-1 group1
+bind 4-2 group2
+bind 4-3 group3
+bind 4-4 group4
+bind 4-5 group5
+bind 4-6 group6
+bind 4-7 group7
+bind 4-8 group8
+bind 4-9 group9
+bind 4S-1 grouponly1
+bind 4S-2 grouponly2
+bind 4S-3 grouponly3
+bind 4S-4 grouponly4
+bind 4S-5 grouponly5
+bind 4S-6 grouponly6
+bind 4S-7 grouponly7
+bind 4S-8 grouponly8
 bind 4S-9 grouponly 9
+bind 4-0 nogroup
+bind 4-` grouptoggle
+bind 4C-1 movetogroup1
+bind 4C-2 movetogroup2
+bind 4C-3 movetogroup3
+bind 4C-4 movetogroup4
+bind 4C-5 movetogroup5
+bind 4C-6 movetogroup6
+bind 4C-7 movetogroup7
+bind 4C-8 movetogroup8
+bind 4C-9 movetogroup9
+# Cycling things use Tab
+bind 4-Tab cyclegroup
+bind 4S-Tab rcyclegroup
+bind M-Tab cycle
+bind MS-Tab rcycle
+bind 4C-Tab cycleingroup
+bind 4CS-Tab rcycleingroup
+bind C-d delete
+bind C-h hide
+bind C-l lower
+bind C-r raise
+bind C-L label
+bind C-f freeze
+bind C-s sticky
+bind C-F fullscreen
+bind C-m maximize
+bind C-V vmaximize
+bind C-H hmaximize
+# Movements using HJLK
+bind 4-k moveup
+bind 4-j movedown
+bind 4-l moveright
+bind 4-h moveleft
+bind 4-K bigmoveup
+bind 4-J bigmovedown
+bind 4-L bigmoveright
+bind 4-H bigmoveleft
+# Resizing using udrt
+bind 4M-k resizeup
+bind 4M-j resizedown
+bind 4M-l resizeright
+bind 4M-h resizeleft
+bind 4M-K bigresizeup
+bind 4M-J bigresizedown
+bind 4M-L bigresizeright
+bind 4M-H bigresizeleft
+# Pointer moving using Up Down Right Left
+bind M-Up ptrmoveup
+bind M-Down ptrmovedown
+bind M-Right ptrmoveright
+bind M-Left ptrmoveleft
+bind MS-Up bigptrmoveup
+bind MS-Down bigptrmovedown
+bind MS-Right bigptrmoveright
+bind MS-Left bigptrmoveleft
+bind CM-h htile
+bind CM-v vtile
+# Mouse Events
+mousebind 4-1 window_move
+mousebind 4-3 window_resize
+mousebind 4-2 window-grouptoggle
 
-bind 4-l cyclegroup
-bind 4-h rcyclegroup
+bind M-u menu_unhide
+bind CM-g window_grouptoggle
+
+# Enable/disable mouse
+bind M-z toggletouch

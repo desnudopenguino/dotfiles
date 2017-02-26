@@ -31,6 +31,10 @@ alias box='cadaver https://dav.box.com/dav/'
 # Quick bundle install
 alias binstall='bundle install --path=~/.gem'
 
+# Weather!
+alias wttr='curl -s wttr.in/Spokane | head -7'
+alias wttrall='curl -s wttr.in/Spokane'
+
 # link scratch function
 . ~/dotfiles/scripts/scratch.ksh
 # link shortcut encription functionality

@@ -3,4 +3,5 @@ xmodmap ~/.xmodmaprc
 conky &
 urxvtd -q -f -o
 cd ~/dotfiles/scripts && ./random_wallpaper.ksh &
+compton &
 /usr/X11R6/bin/cwm

@@ -18,8 +18,9 @@ color menubg        '#000000'
 color menufg        '#000000'
 color urgencyborder '#ff4400'
 color ungroupborder '#ffcc00'
-command terminal urxvtc
-fontname  "Hack:style=Bold,pixelsize=18"
+command term urxvtc
+command lock "xlock -mode image -bitmap /home/bucky/logo.xpm -count 1"
+fontname "Hack:style=Bold,pixelsize=18"
 gap 5 20 5 5
 ignore Conky
 moveamount 10
@@ -27,101 +28,116 @@ snapdist 40
 sticky yes
 
 # Actions
-bind MC-r restart
-bind MC-q quit
-bind MC-Return urxvtc # bind terminal
-bind MC-l lock
-bind M-/ search
-bind M-u menusearch
-bind M-g groupsearch
-bind M-e exec
-bind M-w exec_wm
-bind M-s ssh
+bind-key MC-r restart
+bind-key MC-q quit
+bind-key MC-Return urxvtc # bind terminal
+bind-key MC-l lock
+bind-key MC-z "ZZZ"
+bind-key MC-s "scrot"
+bind-key M-q "qutebrowser"
+bind-key M-Q "qutebrowser --basedir /home/bucky/.hidden-qute"
+bind-key M-f "firefox"
+bind-key M-w menu-window
+bind-key M-u menu-cmd
+bind-key M-g menu-group
+bind-key M-e menu-exec
+bind-key M-m menu-exec-wm
+bind-key M-s menu-ssh
 
 # Groups
-bind 4-1 group1
-bind 4-2 group2
-bind 4-3 group3
-bind 4-4 group4
-bind 4-5 group5
-bind 4-6 group6
-bind 4-7 group7
-bind 4-8 group8
-bind 4-9 group9
-bind 4S-1 grouponly1
-bind 4S-2 grouponly2
-bind 4S-3 grouponly3
-bind 4S-4 grouponly4
-bind 4S-5 grouponly5
-bind 4S-6 grouponly6
-bind 4S-7 grouponly7
-bind 4S-8 grouponly8
-bind 4S-9 grouponly 9
-bind 4-0 nogroup
-bind 4-` grouptoggle
-bind 4C-1 movetogroup1
-bind 4C-2 movetogroup2
-bind 4C-3 movetogroup3
-bind 4C-4 movetogroup4
-bind 4C-5 movetogroup5
-bind 4C-6 movetogroup6
-bind 4C-7 movetogroup7
-bind 4C-8 movetogroup8
-bind 4C-9 movetogroup9
+bind-key 4S-1 group-toggle-1
+bind-key 4S-2 group-toggle-2
+bind-key 4S-3 group-toggle-3
+bind-key 4S-4 group-toggle-4
+bind-key 4S-5 group-toggle-5
+bind-key 4S-6 group-toggle-6
+bind-key 4S-7 group-toggle-7
+bind-key 4S-8 group-toggle-8
+bind-key 4S-9 group-toggle-9
+bind-key 4-1 group-only-1
+bind-key 4-2 group-only-2
+bind-key 4-3 group-only-3
+bind-key 4-4 group-only-4
+bind-key 4-5 group-only-5
+bind-key 4-6 group-only-6
+bind-key 4-7 group-only-7
+bind-key 4-8 group-only-8
+bind-key 4-9 group-only-9
+bind-key 4-0 group-toggle-all
+bind-key 4C-1 window-movetogroup-1
+bind-key 4C-2 window-movetogroup-2
+bind-key 4C-3 window-movetogroup-3
+bind-key 4C-4 window-movetogroup-4
+bind-key 4C-5 window-movetogroup-5
+bind-key 4C-6 window-movetogroup-6
+bind-key 4C-7 window-movetogroup-7
+bind-key 4C-8 window-movetogroup-8
+bind-key 4C-9 window-movetogroup-9
 # Cycling things use Tab
-bind 4-Tab cyclegroup
-bind 4S-Tab rcyclegroup
-bind M-Tab cycle
-bind MS-Tab rcycle
-bind 4C-Tab cycleingroup
-bind 4CS-Tab rcycleingroup
-bind C-d delete
-bind C-h hide
-bind C-l lower
-bind C-r raise
-bind C-L label
-bind C-f freeze
-bind C-s sticky
-bind C-F fullscreen
-bind C-m maximize
-bind C-V vmaximize
-bind C-H hmaximize
+bind-key 4-Tab group-cycle
+bind-key 4S-Tab group-rcycle
+bind-key M-Tab window-cycle
+bind-key MS-Tab window-rcycle
+bind-key 4C-Tab window-cycle-ingroup
+bind-key 4CS-Tab window-rcycle-ingroup
+bind-key C-D window-delete
+bind-key C-h window-hide
+bind-key C-l window-lower
+bind-key C-r window-raise
+bind-key C-L window-menu-label
+bind-key 4-f window-freeze
+bind-key C-s sticky
+bind-key M-F window-fullscreen
+bind-key M-M window-maximize
+bind-key C-V window-vmaximize
+bind-key C-H window-hmaximize
 # Movements using HJLK
-bind 4-k moveup
-bind 4-j movedown
-bind 4-l moveright
-bind 4-h moveleft
-bind 4-K bigmoveup
-bind 4-J bigmovedown
-bind 4-L bigmoveright
-bind 4-H bigmoveleft
+bind-key 4-k window-move-up
+bind-key 4-j window-move-down
+bind-key 4-l window-move-right
+bind-key 4-h window-move-left
+bind-key 4-K window-move-up-big
+bind-key 4-J window-move-down-big
+bind-key 4-L window-move-right-big
+bind-key 4-H window-move-left-big
 # Resizing using udrt
-bind 4M-k resizeup
-bind 4M-j resizedown
-bind 4M-l resizeright
-bind 4M-h resizeleft
-bind 4M-K bigresizeup
-bind 4M-J bigresizedown
-bind 4M-L bigresizeright
-bind 4M-H bigresizeleft
+bind-key 4M-k window-resize-up
+bind-key 4M-j window-resize-down
+bind-key 4M-l window-resize-right
+bind-key 4M-h window-resize-left
+bind-key 4M-K window-resize-up-big
+bind-key 4M-J window-resize-down-big
+bind-key 4M-L window-resize-right-big
+bind-key 4M-H window-resize-left-big
 # Pointer moving using Up Down Right Left
-bind M-Up ptrmoveup
-bind M-Down ptrmovedown
-bind M-Right ptrmoveright
-bind M-Left ptrmoveleft
-bind MS-Up bigptrmoveup
-bind MS-Down bigptrmovedown
-bind MS-Right bigptrmoveright
-bind MS-Left bigptrmoveleft
-bind CM-h htile
-bind CM-v vtile
+bind-key M-Up pointer-move-up
+bind-key M-Down pointer-move-down
+bind-key M-Right pointer-move-right
+bind-key M-Left pointer-move-left
+bind-key MS-Up pointer-move-up-big
+bind-key MS-Down pointer-move-down-big
+bind-key MS-Right pointer-move-right-big
+bind-key MS-Left pointer-move-left-big
+bind-key CM-h window-htile
+bind-key CM-v window-vtile
+bind-key CM-g window-group
 # Mouse Events
-mousebind 4-1 window_move
-mousebind 4-3 window_resize
-mousebind 4-2 window-grouptoggle
-
-bind M-u menu_unhide
-bind CM-g window_grouptoggle
+bind-mouse M-1 window-move
+bind-mouse M-3 window-resize
+bind-mouse M-2 window-window-group
 
 # Enable/disable mouse
-bind M-z toggletouch
+bind-key M-z toggletouch
+
+#
+# auto groups
+#
+
+# group 1 firefox
+autogroup 1 "Firefox"
+autogroup 1 "qutebrowser"
+
+#group 5 image processing
+autogroup 5 "Gimp"
+autogroup 5 "Inkscape"
+autogroup 5 "Darktable"

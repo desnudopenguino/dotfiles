@@ -1,10 +1,4 @@
 ! $OpenBSD: dot.Xdefaults,v 1.3 2014/07/10 10:22:59 jasper Exp $
-! --- ~/.Xresources ------------------------------------------------------------
-! ! ------------------------------------------------------------------------------
-! ! --- generated with 4bit Terminal Color Scheme Designer -----------------------
-! ! ------------------------------------------------------------------------------
-! ! --- http://ciembor.github.com/4bit -------------------------------------------
-! ! ------------------------------------------------------------------------------
 
 ! Hybrid Terminal Colours. Uses the palette from Tomorrow-Night:
 ! ! https://github.com/chriskempson/tomorrow-theme/blob/master/vim/colors/Tomorrow-Night.vim
@@ -37,62 +31,6 @@
 *color7: #707880
 *color15: #C5C8C6
 
-! ! --- special colors ---
-!
-! *background: #0d1926
-! *foreground: #d9e6f2
-!
-! ! --- standard colors ---
-!
-! ! black
-! *color0: #000000
-!
-! ! bright_black
-! *color8: #262626
-!
-! ! red
-! *color1: #6c5339
-!
-! ! bright_red
-! *color9: #c0a488
-!
-! ! green
-! *color2: #396c53
-!
-! ! bright_green
-! *color10: #88c0a4
-!
-! ! yellow
-! *color3: #536c39
-!
-! ! bright_yellow
-! *color11: #a4c088
-!
-! ! blue
-! *color4: #53396c
-!
-! ! bright_blue
-! *color12: #a488c0
-!
-! ! magenta
-! *color5: #6c3953
-!
-! ! bright_magenta
-! *color13: #c088a4
-!
-! ! cyan
-! *color6: #39536c
-!
-! ! bright_cyan
-! *color14: #88a4c0
-!
-! ! white
-! *color7: #d9d9d9
-!
-! ! bright_white
-! *color15: #ffffff
-
-
  ! ------------------------------------------------------------------------------
  ! --- end of terminal colors section -------------------------------------------
  ! ------------------------------------------------------------------------------
@@ -105,7 +43,7 @@ XTerm*faceName: Hack
 ! URxvw settings
 URxvt*loginShell: true
 URxvt*termName: rxvt-unicode-256color
-URxvt*font: xft:Hack
+URxvt*font: xft:Hack:pixelsize=18
 URxvt*scrollBar: false
 URxvt*saveLines: 100000
 URxvt*internalBorder: 0
@@ -116,5 +54,5 @@ URxvt*transparent: true
 URxvt*shading: 20 
 ! clickable links!
 URxvt.perl-ext-common: default,matcher
-URxvt.url-launcher: firefox
+URxvt.url-launcher: qutebrowser
 URxvt.matcher.button: 1

@@ -28,6 +28,7 @@ Plugin 'xolox/vim-notes' " Note taking format for my scratch stuff
 Plugin 'ryanoasis/vim-devicons' " Pretty icons
 Plugin 'tpope/vim-rails' " Rails plugin
 Plugin 'tpope/vim-vinegar' " Plugin to help with netrw
+Plugin 'vim-syntastic/syntastic' " Syntastic syntax checker
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -87,7 +88,7 @@ let g:notes_suffix = '.txt'
 
 " Set tabs to 2 spaces
 set tabstop=2
-set shiftwidth=2
+set shiftwidth=2 expandtab
 
 " show tabs, nbsp, and tabs
 exec "set listchars=tab:\uBB\uBB,trail:\uB7"
@@ -133,6 +134,19 @@ let g:lightline = {
       \ 'subseparator': { 'left': "\ue0b1", 'right': "\ue0b3" }
       \ }
 
+" Syntastic settings
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+" Syntax checkers
+let g:syntastic_ruby_checkers = ['rubocop']
+
 """""""""""""""""""""""""""""""""""""""""""
 " Commands/shortcuts
 """""""""""""""""""""""""""""""""""""""""""
@@ -157,6 +171,8 @@ noremap <left> <nop>
 noremap <up> <nop>
 noremap <right> <nop>
 noremap <down> <nop>
+
+noremap K <nop>
 
 " use ;w to replace escape and save (nice on dvorak, and mapped with ; as :)
 inoremap ;w <esc>:w<CR>

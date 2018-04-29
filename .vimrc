@@ -19,6 +19,7 @@ Plugin 'ludovicchabant/vim-gutentags' " Autogenerate ctags for file
 Plugin 'airblade/vim-gitgutter' " Gutter notifications for git diff
 " Plugin 'Lokaltog/vim-distinguished' "vim distinguished colorscheme
 Plugin 'w0ng/vim-hybrid' " vim-hybrid colorscheme
+Plugin 'dracula/vim' " dracula color scheme
 " Plugin 'onur/vim-motivate' "Motivational goodness!
 Plugin 'itchyny/lightline.vim' " Info line at bottom, more customizable than vim-airline
 Plugin 'lervag/vimtex' " Tex/LaTex plugin for making pretty outputs
@@ -70,8 +71,8 @@ let g:notes_suffix = '.txt'
 " Visuals
 """""""""""""""""""""""""""""""""""""""""""
 " Set tabs to 2 spaces
-set tabstop=2
-set shiftwidth=2 expandtab
+set tabstop=4
+set shiftwidth=4 expandtab
 " show tabs, nbsp, and tabs
 exec "set listchars=tab:\uBB\uBB,trail:\uB7"
 set list
@@ -88,7 +89,7 @@ au FileType css setl ofu=csscomplete#CompleteCSS
 " set the color scheme
 if &term =~ "xterm-256color" || &term =~ "rxvt-unicode-256color" || &term =~ "screen-256color"
   set background=dark
-  colorscheme hybrid
+  colorscheme dracula
 endif
 " set relative number with actual line number (hybrid numbers)
 set relativenumber
@@ -101,15 +102,11 @@ highlight ColorColumn ctermbg=black
 call matchadd('ColorColumn', '\%81v', 16)
 " lightline config
 let g:lightline = {
-      \ 'colorscheme': 'hybrid_dark',
+      \ 'colorscheme': 'darcula',
       \ }
 """""""""""""""""""""""""""""""""""""""""""
 " Commands/shortcuts
 """""""""""""""""""""""""""""""""""""""""""
-" use ; instead of :, one less keystroke needed!
-nmap ; :
-" Fast saving
-noremap ;w :w!<CR>
 " map F8 to toggle tagbar window
 nmap <F8> :TagbarToggle<CR>
 " Close All buffers easily
@@ -121,12 +118,8 @@ noremap <left> <nop>
 noremap <up> <nop>
 noremap <right> <nop>
 noremap <down> <nop>
-" use ;w to replace escape and save (nice on dvorak, and mapped with ; as :)
-inoremap ;w <esc>:w<CR>
-" ;q to escape from insert to normal mode without saving
-inoremap ;q <esc>
 " reload .vimrc
-noremap ;r :source ~/.vimrc<CR>
+noremap :r :source ~/.vimrc<CR>
 " insert timestamp
 :nnoremap <F5> "=strftime("%c")<CR>P
 :inoremap <F5> <C-R>=strftime("%c")<CR>

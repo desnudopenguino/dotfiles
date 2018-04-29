@@ -1,7 +1,7 @@
 export LANG=en_US.UTF-8
-xmodmap ~/.xmodmaprc
+xset -r
 conky &
-urxvtd -q -f -o
 compton &
-xautolock -time 5 -locker "/usr/X11R6/bin/xlock -mode image -bitmap /home/bucky/logo.xpm -count 1" &
+urxvtd -q -f -o
+synergys -c /etc/synergy.conf
 /usr/X11R6/bin/cwm

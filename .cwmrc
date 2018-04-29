@@ -9,11 +9,11 @@ unbind-mouse all
 
 # Default variables
 borderwidth 5
-color activeborder  '#4477bb'
+color activeborder  '#9AEDFE'
 color font          '#4477bb'
 color selfont       '#88bbff'
 color groupborder   '#44bb77'
-color inactiveborder'#222222'
+color inactiveborder'#292a36'
 color menubg        '#000000'
 color menufg        '#000000'
 color urgencyborder '#ff4400'
@@ -21,7 +21,7 @@ color ungroupborder '#ffcc00'
 command term urxvtc
 command lock "xlock -mode image -bitmap /home/bucky/logo.xpm -count 1"
 fontname "Hack:style=Bold,pixelsize=18"
-gap 5 20 5 5
+gap 5 5 5 5
 ignore Conky
 moveamount 10
 snapdist 40

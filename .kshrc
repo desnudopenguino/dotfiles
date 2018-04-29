@@ -10,6 +10,7 @@ set -o vi
 # some aliases!
 alias ll='ls -laf'
 alias vi='vim'
+alias e='vim'
 alias xl='xlock -visual TrueColor -mode random'
 
 # Tmux aliases

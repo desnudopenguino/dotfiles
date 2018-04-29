@@ -45,6 +45,6 @@ alias hidden-qute="qutebrowser --basedir /home/bucky/.hidden-qute"
 alias homevpn="doas openvpn --config .openvpn --cipher AES-256-CBC --daemon openvpn"
 
 # link scratch function
-. ~/dotfiles/scripts/scratch.ksh
+#. ~/dotfiles/scripts/scratch.ksh
 # link shortcut encription functionality
-. ~/dotfiles/scripts/encrypt.ksh
+#. ~/dotfiles/scripts/encrypt.ksh

@@ -1,9 +1,5 @@
 ! $OpenBSD: dot.Xdefaults,v 1.3 2014/07/10 10:22:59 jasper Exp $
 
-! Hybrid Terminal Colours. Uses the palette from Tomorrow-Night:
-! ! https://github.com/chriskempson/tomorrow-theme/blob/master/vim/colors/Tomorrow-Night.vim
-! ! vim: ft=xdefaults
-
 XTerm*loginShell:true
 XTerm*termName: xterm-256color
 XTerm*faceName: Hack
@@ -16,7 +12,7 @@ URxvt*scrollBar: false
 URxvt*saveLines: 100000
 URxvt*internalBorder: 0
 URxvt*externalBorder: 0
-URxvt*cURsorBlink: true
+URxvt*cursorBlink: true
 ! clickable links!
 URxvt.perl-ext-common: default,matcher
 URxvt.url-launcher: firefox

@@ -17,10 +17,7 @@ Plugin 'kristijanhusak/vim-multiple-cursors' " Multiple cursors at once
 Plugin 'majutsushi/tagbar' " Tagbar for ctags
 Plugin 'ludovicchabant/vim-gutentags' " Autogenerate ctags for file
 Plugin 'airblade/vim-gitgutter' " Gutter notifications for git diff
-" Plugin 'Lokaltog/vim-distinguished' "vim distinguished colorscheme
-Plugin 'w0ng/vim-hybrid' " vim-hybrid colorscheme
 Plugin 'dracula/vim' " dracula color scheme
-" Plugin 'onur/vim-motivate' "Motivational goodness!
 Plugin 'itchyny/lightline.vim' " Info line at bottom, more customizable than vim-airline
 Plugin 'lervag/vimtex' " Tex/LaTex plugin for making pretty outputs
 Plugin 'xolox/vim-misc' " Needed for vim-notes
@@ -93,7 +90,6 @@ au FileType c setl ofu=ccomplete#CompleteCpp
 au FileType css setl ofu=csscomplete#CompleteCSS
 " set the color scheme
 if &term =~ "xterm-256color" || &term =~ "rxvt-unicode-256color" || &term =~ "screen-256color"
-  set background=dark
   colorscheme dracula
 endif
 " set relative number with actual line number (hybrid numbers)
@@ -101,9 +97,9 @@ set relativenumber
 set number
 set ruler
 " transparent background
-" hi Normal ctermbg=NONE
+ hi Normal ctermbg=NONE
 " 81st Coumn highlighting
-highlight ColorColumn ctermbg=black
+ highlight ColorColumn ctermbg=238
 call matchadd('ColorColumn', '\%81v', 16)
 " lightline config
 let g:lightline = {
@@ -147,7 +143,7 @@ if !empty(glob(".vim/bundle/ctrlp.vim"))
   let g:ctrlp_cmd = 'CtrlP'
 endif
 " cleans up any whitespace and formatting issues
-function TrimWhiteSpace()
+function TrimWhiteSpace()!
   " retab to set tabs to spaces
   retab
   " remove carriage returns

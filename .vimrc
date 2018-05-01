@@ -67,6 +67,10 @@ set cm=blowfish2
 " Notes settings
 let g:notes_directories = ['~/.scratch']
 let g:notes_suffix = '.txt'
+
+" gutentags
+let g:gutentags_ctags_executable="/usr/local/bin/ectags"
+
 """""""""""""""""""""""""""""""""""""""""""
 " Visuals
 """""""""""""""""""""""""""""""""""""""""""

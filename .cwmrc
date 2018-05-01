@@ -136,8 +136,8 @@ bind-key M-z toggletouch
 #
 
 # group 1 firefox
-autogroup 2 "Firefox"
-autogroup 2 "qutebrowser"
+autogroup 1 "Firefox"
+autogroup 1 "qutebrowser"
 
 #group 5 image processing
 autogroup 5 "Gimp"

@@ -30,7 +30,7 @@ sticky yes
 # Actions
 bind-key MC-r restart
 bind-key MC-q quit
-bind-key MC-Return urxvtc # bind terminal
+bind-key MC-Return "urxvtc -w 10 -b 10" # bind terminal
 bind-key MC-l lock
 bind-key MC-z "ZZZ"
 bind-key MC-s "scrot"

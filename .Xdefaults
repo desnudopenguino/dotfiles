@@ -10,9 +10,9 @@ URxvt*termName: rxvt-unicode-256color
 URxvt*font: xft:Hack:pixelsize=18
 URxvt*scrollBar: false
 URxvt*saveLines: 100000
-URxvt*internalBorder: 0
-URxvt*externalBorder: 0
-URxvt*cursorBlink: true
+URxvt*internalBorder: 10
+URxvt*externalBorder: 10
+URxvt*cURsorBlink: true
 ! clickable links!
 URxvt.perl-ext-common: default,matcher
 URxvt.url-launcher: firefox

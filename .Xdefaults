@@ -15,12 +15,9 @@ URxvt*font: xft:Hack:pixelsize=18
 URxvt*scrollBar: false
 URxvt*internalBorder: 10
 URxvt*saveLines: 100000
-URxvt*internalBorder: 0
-URxvt*externalBorder: 0
+URxvt*internalBorder: 10
+URxvt*externalBorder: 10
 URxvt*cURsorBlink: true
-! transparency
-URxvt*transparent: true
-URxvt*shading: 20 
 ! clickable links!
 URxvt.perl-ext-common: default,matcher
 URxvt.url-launcher: firefox

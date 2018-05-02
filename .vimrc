@@ -143,7 +143,7 @@ if !empty(glob(".vim/bundle/ctrlp.vim"))
   let g:ctrlp_cmd = 'CtrlP'
 endif
 " cleans up any whitespace and formatting issues
-function TrimWhiteSpace()!
+function TrimWhiteSpace()
   " retab to set tabs to spaces
   retab
   " remove carriage returns

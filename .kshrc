@@ -11,7 +11,6 @@ set -o vi
 alias ll='ls -laf'
 alias vi='vim'
 alias e='vim'
-alias xl='xlock -visual TrueColor -mode random'
 
 # Tmux aliases
 alias tml='tmux ls'
@@ -22,6 +21,7 @@ alias tmk='tmux kill-session -t'
 # Quick shutdown
 alias shutdown='doas halt -p'
 alias reboot='doas reboot'
+alias pkg_add='doas pkg_add'
 
 # Quick browse usenig feh
 alias fehb='feh -g 640x480 -d -S filename'

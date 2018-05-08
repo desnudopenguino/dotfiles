@@ -22,6 +22,8 @@ alias tmk='tmux kill-session -t'
 alias shutdown='doas halt -p'
 alias reboot='doas reboot'
 alias pkg_add='doas pkg_add'
+alias pkg_delete='doas pkg_delete'
+alias syspatch='doas syspatch'
 
 # Quick browse usenig feh
 alias fehb='feh -g 640x480 -d -S filename'

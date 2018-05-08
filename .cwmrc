@@ -131,11 +131,16 @@ bind-key M-z toggletouch
 # auto groups
 #
 
-# group 1 firefox
-autogroup 1 "Firefox"
-autogroup 1 "qutebrowser"
+# group 2 browsers
+autogroup 2 "Firefox"
+autogroup 2 "qutebrowser"
 
-#group 5 image processing
-autogroup 5 "Gimp"
-autogroup 5 "Inkscape"
-autogroup 5 "Darktable"
+# group 3: Office stuff
+autogroup 3 "libreoffice-startcenter"
+autogroup 3 "win","Xpdf"
+autogroup 3 "okular","Okular"
+
+# group 4 image processing
+autogroup 4 "Gimp"
+autogroup 4 "Inkscape"
+autogroup 4 "Darktable"

@@ -19,7 +19,7 @@ color menufg        '#000000'
 color urgencyborder '#ff4400'
 color ungroupborder '#ffcc00'
 command term urxvtc
-command lock "xlock -mode image -bitmap /home/bucky/logo.xpm -count 1"
+command lock "i3lock-blur"
 fontname "Hack:style=Bold,pixelsize=18"
 gap 5 5 5 5
 ignore Conky
@@ -31,7 +31,7 @@ sticky yes
 bind-key MC-r restart
 bind-key MC-q quit
 bind-key MC-Return "urxvtc" # bind terminal
-bind-key MC-l "i3lock -c 282A36"
+bind-key MC-l lock
 bind-key MC-z "ZZZ"
 bind-key MC-s "scrot"
 bind-key M-r "rofi -show run"

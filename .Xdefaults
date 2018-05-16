@@ -18,6 +18,8 @@ URxvt.perl-ext-common: default,matcher
 URxvt.url-launcher: firefox
 URxvt.matcher.button: 1
 
+rofi.lines: 5
+
 ! Dracula Xresources palette
 *.foreground: #F8F8F2
 *.background: #282A36

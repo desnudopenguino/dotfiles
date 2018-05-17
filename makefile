@@ -11,6 +11,7 @@ all:
 	@if [ ! -h ~/.fonts ]; then ln -sf `pwd`/.fonts ~/.fonts; fi
 	@if [ ! -h ~/.xsession ]; then ln -sf `pwd`/.xsession ~/.xsession; fi
 	@if [ ! -h ~/.cwmrc ]; then ln -sf `pwd`/.cwmrc ~/.cwmrc; fi
+	@if [ ! -h ~/.bg.png ]; then ln -sf `pwd`/.bg.png ~/.bg.png; fi
 	@if [ ! -h ~/.compton.conf ]; then ln -sf `pwd`/.compton.conf ~/.compton.conf; fi
 	@echo "Installing Git Submodules"
 	@git submodule update --init

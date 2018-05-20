@@ -41,6 +41,8 @@ alias myip="curl -s http://checkip.dyndns.org | sed 's/[a-zA-Z/<> :]//g'"
 # alias vim todo stuff
 # edit todo file
 alias todo="vim ~/todo.txt"
+# list items in todo
+alias list="cat ~/todo.txt"
 # add item to todo file
 add() {
     item="- $*"

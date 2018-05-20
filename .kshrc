@@ -38,5 +38,18 @@ alias allwttr='curl -s wttr.in/Spokane'
 # My external IP
 alias myip="curl -s http://checkip.dyndns.org | sed 's/[a-zA-Z/<> :]//g'"
 
-# alias vim todo.xtx
+# alias vim todo stuff
+# edit todo file
 alias todo="vim ~/todo.txt"
+# add item to todo file
+add() {
+    item="- $*"
+    echo $item >> ~/todo.txt
+}
+export add
+# remove item from todo file
+drop() {
+    string="[-] $*"
+    grep -v "$string$" ~/todo.txt > ~/.todo.tmp && mv ~/.todo.tmp ~/todo.txt
+}
+export drop

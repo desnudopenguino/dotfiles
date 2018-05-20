@@ -21,7 +21,7 @@ color ungroupborder '#ffcc00'
 command term urxvtc
 command lock "i3lock-blur"
 fontname "Hack:style=Bold,pixelsize=18"
-gap 5 5 5 5
+gap 5 5 5 570
 ignore Conky
 moveamount 10
 snapdist 40

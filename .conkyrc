@@ -28,11 +28,12 @@ color7 F1FA8C # yellow
 TEXT
 ${goto 20}${color5}${font FontAwesome :size=20} ${font Hack :bold:size=16}${color5}${nodename} ${sysname} ${kernel}: ${hr 2}${color}${font Hack :bold:size=14}
 ${goto 20}${font FontAwesome :size=18}\
+${if_match "${apm_battery_life}" == "100%"}${color2}${else}\
 ${if_match "${apm_battery_life}" > "75%"}${color2}${else}\
 ${if_match "${apm_battery_life}" > "50%"}${color7}${else}\
 ${if_match "${apm_battery_life}" > "25%"}${color3}${else}\
 ${if_match "${apm_battery_life}" <= "25%"}${color6}${else}${color6}\
-${endif}${endif}${endif}${endif}${font} \
+${endif}${endif}${endif}${endif}${endif}${font} \
 ${apm_battery_life} ${if_match "${apm_battery_time}" != "unknown"}\
 ${apm_battery_time}\
 ${else}Charging${endif}\

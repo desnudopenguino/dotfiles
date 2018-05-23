@@ -34,13 +34,13 @@ bind-key MC-Return "urxvtc" # bind terminal
 bind-key MC-l lock
 bind-key MC-z "ZZZ"
 bind-key MC-s "scrot"
-bind-key M-r "rofi -show run -bw 5"
-bind-key M-d "rofi -show drun -bw 5"
-bind-key M-k "rofi -show keys -bw 5"
-bind-key M-c "rofi -show combi -bw 5"
-bind-key M-s "rofi -show ssh -bw 5"
-bind-key M-w "rofi -show window -bw 5"
-bind-key M-m "rofi -show windowcd -bw 5"
+bind-key M-r "rofi -show run"
+bind-key M-d "rofi -show drun"
+bind-key M-k "rofi -show keys"
+bind-key M-c "rofi -show combi"
+bind-key M-s "rofi -show ssh"
+bind-key M-w "rofi -show window"
+bind-key M-m "rofi -show windowcd"
 
 # Groups
 bind-key 4S-1 group-toggle-1

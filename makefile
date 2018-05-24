@@ -17,7 +17,7 @@ all:
 	@echo "Installing Git Submodules"
 	@git submodule update --init
 	@echo "Installing Vim Plugins"
-	@vim +"colorscheme default" +PluginInstall +qall
+	@vim +PluginInstall +qall
 	@echo "Installing Fonts...\n"
 	@/usr/X11R6/bin/fc-cache -v
 	@xset fp rehash

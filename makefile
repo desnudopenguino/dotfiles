@@ -20,4 +20,3 @@ all:
 	@vim +PluginInstall +qall
 	@echo "Installing Fonts...\n"
 	@/usr/X11R6/bin/fc-cache -v
-	@xset fp rehash

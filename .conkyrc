@@ -8,7 +8,7 @@ own_window_colour 282A36
 own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
 use_spacer none
 uppercase no
-update_interval 0.5
+update_interval 1.0
 update_interval_on_battery 2.0
 gap_x 20
 gap_y 20

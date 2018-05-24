@@ -90,7 +90,7 @@ au FileType c setl ofu=ccomplete#CompleteCpp
 au FileType css setl ofu=csscomplete#CompleteCSS
 " set the color scheme
 if &term =~ "xterm-256color" || &term =~ "rxvt-unicode-256color" || &term =~ "screen-256color"
-  colorscheme dracula
+  silent! colorscheme dracula
 endif
 " set relative number with actual line number (hybrid numbers)
 set relativenumber

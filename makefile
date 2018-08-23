@@ -12,6 +12,7 @@ all:
 	@if [ ! -h ~/.xsession ]; then ln -sf `pwd`/.xsession ~/.xsession; fi
 	@if [ ! -h ~/.cwmrc ]; then ln -sf `pwd`/.cwmrc ~/.cwmrc; fi
 	@if [ ! -h ~/.conkyrc ]; then ln -sf `pwd`/.conkyrc ~/.conkyrc; fi
+	@if [ ! -h ~/.conkyrc2 ]; then ln -sf `pwd`/.conkyrc2 ~/.conkyrc2; fi
 	@if [ ! -h ~/.bg.png ]; then ln -sf `pwd`/.bg.png ~/.bg.png; fi
 	@if [ ! -h ~/.compton.conf ]; then ln -sf `pwd`/.compton.conf ~/.compton.conf; fi
 	@echo "Installing Git Submodules"

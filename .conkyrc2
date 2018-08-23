@@ -26,4 +26,5 @@ color6 FF5555 # red
 color7 F1FA8C # yellow
 
 TEXT
+${goto 20}${color5}${font FontAwesome :size=16} ${font Hack :bold:size=16}SYSTEM LOG: ${hr 2}${color}${font}
 ${tail /var/log/messages 10}

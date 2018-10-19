@@ -16,7 +16,7 @@ Plugin 'ctrlpvim/ctrlp.vim' " Fuzzy search
 Plugin 'kristijanhusak/vim-multiple-cursors' " Multiple cursors at once
 Plugin 'majutsushi/tagbar' " Tagbar for ctags
 Plugin 'ludovicchabant/vim-gutentags' " Autogenerate ctags for file
-Plugin 'airblade/vim-gitgutter' " Gutter notifications for git diff
+" Plugin 'airblade/vim-gitgutter' " Gutter notifications for git diff
 Plugin 'dracula/vim' " dracula color scheme
 Plugin 'itchyny/lightline.vim' " Info line at bottom, more customizable than vim-airline
 Plugin 'lervag/vimtex' " Tex/LaTex plugin for making pretty outputs

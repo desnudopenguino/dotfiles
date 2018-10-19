@@ -21,7 +21,7 @@ color ungroupborder '#ffcc00'
 command term urxvtc
 command lock "i3lock-blur"
 fontname "Hack:style=Bold,pixelsize=18"
-gap 5 5 5 570
+gap 5 5 570 5
 ignore Conky
 moveamount 10
 snapdist 40
@@ -34,6 +34,8 @@ bind-key MC-Return "urxvtc" # bind terminal
 bind-key MC-l lock
 bind-key MC-z "ZZZ"
 bind-key MC-s "scrot"
+bind-key MC-a "xset r"
+bind-key MC-o "xset -r"
 bind-key M-r "rofi -show run"
 bind-key M-d "rofi -show drun"
 bind-key M-k "rofi -show keys"
@@ -145,3 +147,6 @@ autogroup 4 "Gimp"
 autogroup 4 "Inkscape"
 autogroup 4 "Darktable"
 autogroup 4 "Blender"
+
+# group 7 conky
+autogroup 7 "Conky2"

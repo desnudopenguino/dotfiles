@@ -3,12 +3,13 @@ use_xft yes
 xftfont Hack :bold:size=12
 double_buffer yes
 own_window yes
+own_window_class Conky2
 own_window_type desktop
 own_window_colour 282A36
 own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
 use_spacer none
 uppercase no
-update_interval 0.1
+update_interval 1.0
 update_interval_on_battery 2.0
 gap_x 20
 gap_y 20
@@ -16,7 +17,7 @@ background no
 default_color F8F8F2
 border_inner_margin 15
 minimum_size 535
-maximum_width 1080
+maximum_width 1920
 color1 8BE9FD # cyan
 color2 50FA7B # green
 color3 FFB86C # orange

@@ -41,3 +41,6 @@ alias myip="curl -s http://checkip.dyndns.org | sed 's/[a-zA-Z/<> :]//g'"
 # run last command with doas
 alias fuck='doas $(fc -ln -1)'
 alias pls='doas $(fc -ln -1)'
+
+# alias for ifconfig
+alias ifconfig='doas ifconfig'

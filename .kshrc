@@ -21,6 +21,8 @@ alias tmk='tmux kill-session -t'
 # Quick shutdown
 alias shutdown='doas halt -p'
 alias reboot='doas reboot'
+
+# simpler pkg mgmt
 alias pkg_add='doas pkg_add'
 alias pkg_delete='doas pkg_delete'
 alias syspatch='doas syspatch'

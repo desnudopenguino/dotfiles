@@ -7,7 +7,7 @@ XTerm*faceName: Hack
 ! URxvt settings
 URxvt*loginShell: true
 URxvt*termName: rxvt-unicode-256color
-URxvt*font: xft:Hack:pixelsize=18
+URxvt*font: xft:Hack:pixelsize=14
 URxvt*scrollBar: false
 URxvt*saveLines: 100000
 URxvt*internalBorder: 10
@@ -22,7 +22,7 @@ URxvt.matcher.button: 1
 rofi.lines: 5
 rofi.padding: 100
 rofi.hide-scrollbar: true
-rofi.font: Hack Bold 14
+rofi.font: Hack Bold 12
 rofi.separator-style: solid
 rofi.color-enabled: true
 rofi.color-window: #282A36, #9AEDFE, #9AEDFE

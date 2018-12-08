@@ -15,8 +15,8 @@ gap_y 20
 background no
 default_color F8F8F2
 border_inner_margin 15
-minimum_size 535
-maximum_width 535
+minimum_size 515
+maximum_width 515
 color1 8BE9FD # cyan
 color2 50FA7B # green
 color3 FFB86C # orange
@@ -40,52 +40,52 @@ ${apm_battery_time}\
 ${else}Charging${endif}
 
 ${goto 20}${color5}${font FontAwesome :size=14} ${font Hack :bold:size=14}PROCESSING: ${hr 2}${color1}${font}
-${goto 20}${color}${font}CPU:${color1} $cpu% $freq MHz${goto 300}${color}${font}RAM:$color1 $memperc% $mem/$memmax
-${goto 20}${cpugraph 30,250 8BE9FD F8F8F2 }${goto 300}${memgraph 30,250 8BE9FD F8F8F2 }
-${goto 20}${color}${font FontAwesome}${font} Swap:${color1} $swapperc% $swap/$swapfree$color1${goto 300}${swapbar 10,250}
-${goto 20}${color}CPU 0:${color1} $color1${cpubar cpu0 10, 180 color1 -t -l}$color${goto 300}CPU 2: $color1${cpubar cpu2 10, 180}$color
-${goto 20}CPU 1: $color1${cpubar cpu1 10, 180 color1 -t -l}$color${goto 300}CPU 3: $color1${cpubar cpu3 10, 180}$color
+${goto 20}${color}${font}CPU:${color1} $cpu% $freq MHz${goto 280}${color}${font}RAM:$color1 $memperc% $mem/$memmax
+${goto 20}${cpugraph 30,250 8BE9FD F8F8F2 }${goto 280}${memgraph 30,250 8BE9FD F8F8F2 }
+${goto 20}${color}${font FontAwesome}${font} Swap:${color1} $swapperc% $swap/$swapfree$color1${goto 280}${swapbar 10,250}
+${goto 20}${color}CPU 0:${color1} $color1${cpubar cpu0 10, 193 color1 -t -l}$color${goto 280}CPU 2: $color1${cpubar cpu2 10, 193}$color
+${goto 20}CPU 1: $color1${cpubar cpu1 10, 193 color1 -t -l}$color${goto 280}CPU 3: $color1${cpubar cpu3 10, 193}$color
 
 ${goto 20}${color5}${font FontAwesome :size=14} ${font Hack :bold:size=14}NETWORKING: ${hr 2}${color4}${font}
 ${goto 20}${if_up re0}${goto 20}${color}${font FontAwesome} ${font}re0${color4} ${addr re0}
 ${goto 20}${color2}${font FontAwesome}  ${font}${totaldown re0}${goto 200}${downspeed re0}\
-${goto 300}${color7}${font FontAwesome}  ${font}${totalup re0}${goto 500}${upspeed re0}${color4}
+${goto 280}${color7}${font FontAwesome}  ${font}${totalup re0}${goto 500}${upspeed re0}${color4}
 ${goto 20}${downspeedgraph re0 30,250 FF79C6 50FA7B}\
-${goto 300}${upspeedgraph re0 30,250 FF79C6 F1FA8C} ${endif}
+${goto 280}${upspeedgraph re0 30,250 FF79C6 F1FA8C} ${endif}
 ${goto 20}${if_up iwm0}${goto 20}${color}${font FontAwesome} ${font}iwm0${color4} ${addr iwm0}
 ${goto 20}${color2}${font FontAwesome}  ${font}${totaldown iwm0}${goto 200}${downspeed iwm0}\
-${goto 300}${color7}${font FontAwesome}  ${font}${totalup iwm0}${goto 500}${upspeed iwm0}${color4}
+${goto 280}${color7}${font FontAwesome}  ${font}${totalup iwm0}${goto 500}${upspeed iwm0}${color4}
 ${goto 20}${downspeedgraph iwm0 30,250 FF79C6 50FA7B}\
-${goto 300}${upspeedgraph iwm0 30,250 FF79C6 F1FA8C} ${endif}
+${goto 280}${upspeedgraph iwm0 30,250 FF79C6 F1FA8C} ${endif}
 
 ${goto 20}${color5}${font FontAwesome :size=14} ${font Hack :bold:size=14}FILE SYSTEM: ${hr 2}${color3}${font}
-${goto 20}${color}/${color3}${goto 130}${fs_used /}/${fs_size /}${goto 300}${fs_bar 6,250 /}
-${goto 20}${color}/home${color3}${goto 130}${fs_used /home}/${fs_size /home}${goto 300}${fs_bar 6, 250 /home}
-${goto 20}${color}/tmp${color3}${goto 130}${fs_used /tmp}/${fs_size /tmp}${goto 300}${fs_bar 6, 250 /tmp}
-${goto 20}${color}/usr${color3}${goto 130}${fs_used /usr}/${fs_size /usr}${goto 300}${fs_bar 6, 250 /usr}
-${goto 20}${color}/usr/local${color3}${goto 130}${fs_used /usr/local}/${fs_size /usr/local}${goto 300}${fs_bar 6, 250 /usr/local}
-${goto 20}${color}/usr/X11R6${color3}${goto 130}${fs_used /usr/X11R6}/${fs_size /usr/X11R6}${goto 300}${fs_bar 6, 250 /usr/X11R6}
-${goto 20}${color}/usr/obj${color3}${goto 130}${fs_used /usr/obj}/${fs_size /usr/obj}${goto 300}${fs_bar 6, 250 /usr/obj}
-${goto 20}${color}/usr/src${color3}${goto 130}${fs_used /usr/src}/${fs_size /usr/src}${goto 300}${fs_bar 6, 250 /usr/src}
-${goto 20}${color}/var${color3}${goto 130}${fs_used /var}/${fs_size /var}${goto 300}${fs_bar 6, 250 /var}
+${goto 20}${color}/${color3}${goto 130}${fs_used /}/${fs_size /}${goto 280}${fs_bar 6,250 /}
+${goto 20}${color}/home${color3}${goto 130}${fs_used /home}/${fs_size /home}${goto 280}${fs_bar 6, 250 /home}
+${goto 20}${color}/tmp${color3}${goto 130}${fs_used /tmp}/${fs_size /tmp}${goto 280}${fs_bar 6, 250 /tmp}
+${goto 20}${color}/usr${color3}${goto 130}${fs_used /usr}/${fs_size /usr}${goto 280}${fs_bar 6, 250 /usr}
+${goto 20}${color}/usr/local${color3}${goto 130}${fs_used /usr/local}/${fs_size /usr/local}${goto 280}${fs_bar 6, 250 /usr/local}
+${goto 20}${color}/usr/X11R6${color3}${goto 130}${fs_used /usr/X11R6}/${fs_size /usr/X11R6}${goto 280}${fs_bar 6, 250 /usr/X11R6}
+${goto 20}${color}/usr/obj${color3}${goto 130}${fs_used /usr/obj}/${fs_size /usr/obj}${goto 280}${fs_bar 6, 250 /usr/obj}
+${goto 20}${color}/usr/src${color3}${goto 130}${fs_used /usr/src}/${fs_size /usr/src}${goto 280}${fs_bar 6, 250 /usr/src}
+${goto 20}${color}/var${color3}${goto 130}${fs_used /var}/${fs_size /var}${goto 280}${fs_bar 6, 250 /var}
 
 ${goto 20}${color5}${font FontAwesome :size=14} ${font Hack :bold:size=14}PROCESSES: ${hr 2}${color}${font}
 ${goto 20}${color2}Name${goto 140}PID${goto 220}CPU%\
-${goto 300}${color7}Name${goto 420}PID${goto 500}MEM%
+${goto 280}${color7}Name${goto 420}PID${goto 500}MEM%
 ${color}\
 ${goto 20}${top name 1}${goto 140}${top pid 1}${goto 200}${top cpu 1}\
-${goto 300}${top_mem name 1}${goto 420}${top_mem pid 1}${goto 480}${top_mem mem 1}
+${goto 280}${top_mem name 1}${goto 420}${top_mem pid 1}${goto 480}${top_mem mem 1}
 ${goto 20}${top name 2}${goto 140}${top pid 2}${goto 200}${top cpu 2}\
-${goto 300}${top_mem name 2}${goto 420}${top_mem pid 2}${goto 480}${top_mem mem 2}
+${goto 280}${top_mem name 2}${goto 420}${top_mem pid 2}${goto 480}${top_mem mem 2}
 ${goto 20}${top name 3}${goto 140}${top pid 3} ${goto 200}${top cpu 3}\
-${goto 300}${top_mem name 3}${goto 420}${top_mem pid 3}${goto 480}${top_mem mem 3}
+${goto 280}${top_mem name 3}${goto 420}${top_mem pid 3}${goto 480}${top_mem mem 3}
 ${goto 20}${top name 4}${goto 140}${top pid 4} ${goto 200}${top cpu 4}\
-${goto 300}${top_mem name 4}${goto 420}${top_mem pid 4}${goto 480}${top_mem mem 4}
+${goto 280}${top_mem name 4}${goto 420}${top_mem pid 4}${goto 480}${top_mem mem 4}
 ${goto 20}${top name 5}${goto 140}${top pid 5} ${goto 200}${top cpu 5}\
-${goto 300}${top_mem name 5}${goto 420}${top_mem pid 5}${goto 480}${top_mem mem 5}
+${goto 280}${top_mem name 5}${goto 420}${top_mem pid 5}${goto 480}${top_mem mem 5}
 ${goto 20}${top name 6}${goto 140}${top pid 6} ${goto 200}${top cpu 6}\
-${goto 300}${top_mem name 6}${goto 420}${top_mem pid 6}${goto 480}${top_mem mem 6}
+${goto 280}${top_mem name 6}${goto 420}${top_mem pid 6}${goto 480}${top_mem mem 6}
 ${goto 20}${top name 7}${goto 140}${top pid 7} ${goto 200}${top cpu 7}\
-${goto 300}${top_mem name 7}${goto 420}${top_mem pid 7}${goto 480}${top_mem mem 7}
+${goto 280}${top_mem name 7}${goto 420}${top_mem pid 7}${goto 480}${top_mem mem 7}
 ${goto 20}${top name 8}${goto 140}${top pid 8} ${goto 200}${top cpu 8}\
-${goto 300}${top_mem name 8}${goto 420}${top_mem pid 8}${goto 480}${top_mem mem 8}
+${goto 280}${top_mem name 8}${goto 420}${top_mem pid 8}${goto 480}${top_mem mem 8}

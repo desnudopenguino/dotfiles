@@ -8,8 +8,8 @@ own_window_colour 282A36
 own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
 use_spacer none
 uppercase no
-update_interval 1.0
-update_interval_on_battery 2.0
+update_interval 1.5
+update_interval_on_battery 3.0
 gap_x 20
 gap_y 20
 background no
@@ -27,7 +27,7 @@ color7 F1FA8C # yellow
 
 TEXT
 ${goto 20}${color5}${font FontAwesome :size=18} ${font Hack :bold:size=14}${color5}${nodename} ${sysname} ${kernel}: ${hr 2}${color}${font Hack :bold:size=12}
-${goto 20}${color}${font Hack :bold:size=14}${time}${font}\
+${goto 20}${color}${font Hack :bold:size=14}${exec date +"%a"} ${time}${font}\
 ${font FontAwesome :size=16}${alignr}\
 ${if_match "${apm_battery_life}" == "100%"}${color2}${else}\
 ${if_match "${apm_battery_life}" > "75%"}${color2}${else}\

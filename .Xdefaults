@@ -1,8 +1,10 @@
 ! $OpenBSD: dot.Xdefaults,v 1.3 2014/07/10 10:22:59 jasper Exp $
 
-XTerm*loginShell:true
-XTerm*termName: xterm-256color
-XTerm*faceName: Hack
+xterm*loginShell:true
+xterm*termName: xterm-256color
+xterm*scrollBar: false
+xterm*faceSize: 11
+xterm*faceName: Hack
 
 ! URxvt settings
 URxvt*loginShell: true
@@ -30,7 +32,7 @@ rofi.color-normal: #282A36, #BD93F9, #4D4D4D, #FF79C6, #282A36
 rofi.color-urgent: #282A36, #FF5555, #4D4D4D, #FF5555, #282A36
 rofi.color-active: #282A36, #F1FA8C, #4D4D4D, #F1FA8C, #282A36
 rofi.border-width: 5
-rofi.terminal: urxvtc
+rofi.terminal: xterm
 rofi.run-shell-command: {terminal} -e '{cmd}'
 
 

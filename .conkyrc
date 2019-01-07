@@ -89,3 +89,5 @@ ${goto 20}${top name 7}${goto 140}${top pid 7} ${goto 200}${top cpu 7}\
 ${goto 280}${top_mem name 7}${goto 420}${top_mem pid 7}${goto 480}${top_mem mem 7}
 ${goto 20}${top name 8}${goto 140}${top pid 8} ${goto 200}${top cpu 8}\
 ${goto 280}${top_mem name 8}${goto 420}${top_mem pid 8}${goto 480}${top_mem mem 8}
+${goto 20}${color5}${font FontAwesome :size=14} ${font Hack :bold:size=14}SYSTEM LOG: ${hr 2}${color}${font}
+${tail /var/log/messages 5}

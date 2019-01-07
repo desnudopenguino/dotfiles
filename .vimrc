@@ -157,3 +157,7 @@ noremap :trim :call TrimWhiteSpace()<CR>
 if executable('html-beautify')
   let &l:formatprg = 'html-beautify -I -s ' . &shiftwidth
 endif
+
+" html and js
+autocmd FileType html setlocal shiftwidth=2 tabstop=2 expandtab
+autocmd FileType javascript setlocal shiftwidth=2 tabstop=2 expandtab

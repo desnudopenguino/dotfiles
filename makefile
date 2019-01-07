@@ -21,3 +21,12 @@ all:
 	@vim +PluginInstall +qall
 	@echo "Installing Fonts...\n"
 	@/usr/X11R6/bin/fc-cache -v
+
+cli
+	@if [ ! -h ~/.vimrc ]; then ln -sf `pwd`/.vimrc ~/.vimrc; fi
+	@if [ ! -h ~/.vim ]; then ln -sf `pwd`/.vim ~/.vim; fi
+	@if [ ! -h ~/.tmux ]; then ln -sf `pwd`/.tmux ~/.tmux; fi
+	@echo "Installing Git Submodules"
+	@git submodule update --init
+	@echo "Installing Vim Plugins"
+	@vim +PluginInstall +qall

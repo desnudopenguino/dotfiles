@@ -9,7 +9,3 @@
 [submodule ".fonts/powerline"]
 	path = .fonts/powerline
 	url = http://github.com/powerline/fonts
-
-[submodule "tmux-airline-dracula"]
-	path = .tmux/plugins/tmux-airline-dracula
-	url = https://github.com/desnudopenguino/tmux-airline-dracula

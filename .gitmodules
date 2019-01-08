@@ -12,4 +12,4 @@
 
 [submodule "tmux-airline-dracula"]
 	path = .tmux/plugins/tmux-airline-dracula
-	url = https://github.com/desnudopenguino/tmux-airline/dracula
+	url = https://github.com/desnudopenguino/tmux-airline-dracula

@@ -80,14 +80,17 @@ exec "set listchars=tab:\uBB\uBB,trail:\uB7"
 set list
 " highlight current cursor line
 set cursorline
+
 " Turn syntax on
 syntax on
+
+" autocomplete
 filetype plugin on
-" au FileType php,html,ctp setl ofu=phpcomplete#CompletePHP
+au FileType php,html,ctp setl ofu=phpcomplete#CompletePHP
 au FileType ruby,eruby setl ofu=rubycomplete#Complete
-au FileType html,ctp setl ofu=complete#CompleteTags
-au FileType c setl ofu=ccomplete#CompleteCpp
+au FileType html setl ofu=htmlcomplete#CompleteTags
 au FileType css setl ofu=csscomplete#CompleteCSS
+
 " set the color scheme
 if &term =~ "xterm-256color" || &term =~ "rxvt-unicode-256color" || &term =~ "screen-256color"
   silent! colorscheme dracula
@@ -158,6 +161,13 @@ if executable('html-beautify')
   let &l:formatprg = 'html-beautify -I -s ' . &shiftwidth
 endif
 
-" html and js
-autocmd FileType html setlocal shiftwidth=2 tabstop=2 expandtab
-autocmd FileType javascript setlocal shiftwidth=2 tabstop=2 expandtab
+" html, js, and css tabbings
+autocmd FileType html,javascript,css,yaml setlocal shiftwidth=2 tabstop=2 expandtab
+
+
+" set syntax checker for latex
+let g:syntastic_tex_lacheck_quiet_messages = { 'regex': '\Vpossible unwanted space at' }
+let g:syntastic_tex_checkers = ['lacheck']
+
+" auto complete tags
+:iabbrev <lt>// </<C-X><C-O><Esc>==gi

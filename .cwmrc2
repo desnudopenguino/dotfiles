@@ -9,7 +9,7 @@ unbind-mouse all
 
 # Default variables
 borderwidth 5
-color activeborder  '#282A36'
+color activeborder  '#9AEDFE'
 color font          '#4477bb'
 color selfont       '#88bbff'
 color groupborder   '#44bb77'
@@ -20,8 +20,8 @@ color urgencyborder '#ff4400'
 color ungroupborder '#ffcc00'
 command term urxvtc
 command lock "i3lock-blur"
-fontname "Hack:style=Bold,pixelsize=18"
-gap 20 20 550 20
+fontname "Hack:style=Bold,pixelsize=14"
+gap 5 230 570 5
 ignore Conky
 moveamount 10
 snapdist 40
@@ -89,8 +89,8 @@ bind-key 4-f window-freeze
 bind-key C-s sticky
 bind-key M-F window-fullscreen
 bind-key M-M window-maximize
-bind-key M-V window-vmaximize
-bind-key M-H window-hmaximize
+bind-key C-V window-vmaximize
+bind-key C-H window-hmaximize
 # Movements using HJLK
 bind-key 4-k window-move-up
 bind-key 4-j window-move-down
@@ -148,5 +148,5 @@ autogroup 4 "Inkscape"
 autogroup 4 "Darktable"
 autogroup 4 "Blender"
 
-# group 5 rdp
-autogroup 5 "xfreerdp"
+# group 7 conky
+autogroup 7 "Conky2"

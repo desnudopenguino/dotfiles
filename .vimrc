@@ -23,6 +23,7 @@ Plugin 'xolox/vim-misc' " Needed for vim-notes
 Plugin 'xolox/vim-notes' " Note taking format for my scratch stuff
 Plugin 'ryanoasis/vim-devicons' " Pretty icons
 Plugin 'tpope/vim-rails' " Rails plugin
+Plugin 'fatih/vim-go' " Go plugin
 Plugin 'tpope/vim-vinegar' " Plugin to help with netrw
 Plugin 'vim-syntastic/syntastic' " Syntastic syntax checker
 " All of your Plugins must be added before the following line
@@ -74,6 +75,7 @@ let g:gutentags_ctags_executable="/usr/local/bin/ectags"
 " Set tabs to 2 spaces
 set tabstop=4
 set shiftwidth=4 expandtab
+set breakindent
 " show tabs, nbsp, and tabs
 exec "set listchars=tab:\uBB\uBB,trail:\uB7"
 set list
@@ -161,7 +163,7 @@ if executable('html-beautify')
 endif
 
 " html, js, and css tabbings
-autocmd FileType html,javascript,css,yaml setlocal shiftwidth=2 tabstop=2 expandtab
+autocmd FileType html,javascript,css,yaml setlocal shiftwidth=2 tabstop=2
 
 
 " set syntax checker for latex

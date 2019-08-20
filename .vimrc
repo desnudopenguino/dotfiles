@@ -26,6 +26,8 @@ Plugin 'tpope/vim-rails' " Rails plugin
 Plugin 'fatih/vim-go' " Go plugin
 Plugin 'tpope/vim-vinegar' " Plugin to help with netrw
 Plugin 'vim-syntastic/syntastic' " Syntastic syntax checker
+Plugin 'junegunn/fzf' " fzf in vim
+Plugin 'junegunn/fzf.vim' " fzf in vim
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required

@@ -36,6 +36,9 @@ filetype plugin indent on    " required
 """""""""""""""""""""""""""""""""""""""""""
 " Behaviors
 """""""""""""""""""""""""""""""""""""""""""
+" set the leader
+noremap <space> <nop>
+let mapleader = ' '
 " netrw
 let g:netrw_liststyle = 3
 let g:netrw_banner = 1
@@ -78,14 +81,19 @@ let g:gutentags_ctags_executable="/usr/local/bin/ectags"
 set tabstop=4
 set shiftwidth=4 expandtab
 set breakindent
+
 " show tabs, nbsp, and tabs
 exec "set listchars=tab:\uBB\uBB,trail:\uB7"
 set list
+
 " highlight current cursor line
 set cursorline
 
 " Turn syntax on
 syntax on
+
+" show command
+set showcmd
 
 " autocomplete
 filetype plugin on
@@ -174,3 +182,7 @@ let g:syntastic_tex_checkers = ['lacheck']
 
 " auto complete tags
 :iabbrev <lt>// </<C-X><C-O><Esc>==gi
+
+" fzf
+nmap <Leader>f :Files<CR>
+nmap <Leader>F :GFiles<CR>

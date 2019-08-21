@@ -131,6 +131,7 @@ let g:syntastic_check_on_wq = 0
 
 " Syntax checkers
 let g:syntastic_ruby_checkers = ['rubocop']
+let g:syntastic_php_checkers = ['php']
 
 """""""""""""""""""""""""""""""""""""""""""
 " Commands/shortcuts
@@ -147,7 +148,7 @@ noremap <up> <nop>
 noremap <right> <nop>
 noremap <down> <nop>
 " reload .vimrc
-noremap :r :source ~/.vimrc<CR>
+noremap <Leader>r :source ~/.vimrc<CR>
 " insert timestamp
 :nnoremap <F5> "=strftime("%c")<CR>P
 :inoremap <F5> <C-R>=strftime("%c")<CR>
@@ -185,4 +186,15 @@ let g:syntastic_tex_checkers = ['lacheck']
 
 " fzf
 nmap <Leader>f :Files<CR>
-nmap <Leader>F :GFiles<CR>
+nmap <Leader>g :GFiles<CR>
+nmap <Leader>b :Buffers<CR>
+nmap <Leader>h :History<CR>
+nmap <Leader>t :BTags<CR>
+nmap <Leader>T :Tags<CR>
+nmap <Leader>l :BLines<CR>
+nmap <Leader>L :Lines<CR>
+nmap <Leader>' :Marks<CR>
+nmap <Leader>H :Helptags!<CR>
+nmap <Leader>C :Commands<CR>
+nmap <Leader>: :History:<CR>
+nmap <Leader>M :Maps<CR>

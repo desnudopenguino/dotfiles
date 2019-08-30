@@ -79,7 +79,7 @@ let g:gutentags_ctags_executable="/usr/local/bin/ectags"
 """""""""""""""""""""""""""""""""""""""""""
 " Set tabs to 2 spaces
 set tabstop=4
-set shiftwidth=4 expandtab
+set shiftwidth=4
 set breakindent
 
 " show tabs, nbsp, and tabs
@@ -202,5 +202,12 @@ nmap <leader>w :w<CR>
 nmap <leader>W :w!<CR>
 nmap <leader>q :q<CR>
 nmap <leader>Q :q!<CR>
+nmap <leader>a :qa!<CR>
 nmap <leader>e :e!<CR>
 nmap <leader>z ZZ<CR>
+
+" close html syntax
+inoremap <C-C> </<C-X><C-O>
+
+" auto complete single leader key
+inoremap <C-x> <C-X><C-O>

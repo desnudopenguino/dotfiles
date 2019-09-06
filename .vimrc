@@ -213,5 +213,8 @@ inoremap <C-C> </<C-X><C-O>
 " auto complete single leader key
 inoremap <C-x> <C-X><C-O>
 
+" resize splits
 nmap <Leader>. <C-W>>
 nmap <Leader>, <C-W><
+nmap <Leader>- <C-W>-
+nmap <leader>= <C-W>+

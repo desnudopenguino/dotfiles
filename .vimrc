@@ -28,6 +28,7 @@ Plugin 'tpope/vim-vinegar' " Plugin to help with netrw
 Plugin 'vim-syntastic/syntastic' " Syntastic syntax checker
 Plugin 'junegunn/fzf' " fzf in vim
 Plugin 'junegunn/fzf.vim' " fzf in vim
+Plugin 'arzg/vim-corvine' " another color theme
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -104,21 +105,21 @@ au FileType css setl ofu=csscomplete#CompleteCSS
 
 " set the color scheme
 if &term =~ "xterm-256color" || &term =~ "rxvt-unicode-256color" || &term =~ "screen-256color"
-  silent! colorscheme dracula
+silent! colorscheme corvine
 endif
 " set relative number with actual line number (hybrid numbers)
 set relativenumber
 set number
 set ruler
 " transparent background
- hi Normal ctermbg=NONE
+hi Normal ctermbg=NONE
 " 81st Coumn highlighting
- highlight ColorColumn ctermbg=238
+highlight ColorColumn ctermbg=238
 call matchadd('ColorColumn', '\%81v', 16)
 " lightline config
 let g:lightline = {
-      \ 'colorscheme': 'darcula',
-      \ }
+  \ 'colorscheme': 'darcula',
+  \ }
 " Syntastic settings
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -154,23 +155,23 @@ noremap <Leader>r :source ~/.vimrc<CR>
 :inoremap <F5> <C-R>=strftime("%c")<CR>
 " commands for CtrlP
 if !empty(glob(".vim/bundle/ctrlp.vim"))
-  let g:ctrlp_map = '<c-p>'
-  let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
 endif
 " cleans up any whitespace and formatting issues
 function TrimWhiteSpace()
-  " retab to set tabs to spaces
-  retab
-  " remove carriage returns
-  %s///g
-  " remove spaces
-  %s/\s\+$//e
+" retab to set tabs to spaces
+retab
+" remove carriage returns
+%s///g
+" remove spaces
+%s/\s\+$//e
 endfunction
 noremap :trim :call TrimWhiteSpace()<CR>
 
 " html beautify
 if executable('html-beautify')
-  let &l:formatprg = 'html-beautify -I -s ' . &shiftwidth
+let &l:formatprg = 'html-beautify -I -s ' . &shiftwidth
 endif
 
 " html, js, and css tabbings
@@ -198,16 +199,19 @@ nmap <Leader>H :Helptags!<CR>
 nmap <Leader>C :Commands<CR>
 nmap <Leader>: :History:<CR>
 nmap <Leader>M :Maps<CR>
-nmap <leader>w :w<CR>
-nmap <leader>W :w!<CR>
-nmap <leader>q :q<CR>
-nmap <leader>Q :q!<CR>
-nmap <leader>a :qa!<CR>
-nmap <leader>e :e!<CR>
-nmap <leader>z ZZ<CR>
+nmap <Leader>w :w<CR>
+nmap <Leader>W :w!<CR>
+nmap <Leader>q :q<CR>
+nmap <Leader>Q :q!<CR>
+nmap <Leader>a :qa!<CR>
+nmap <Leader>e :e!<CR>
+nmap <Leader>z ZZ<CR>
 
 " close html syntax
 inoremap <C-C> </<C-X><C-O>
 
 " auto complete single leader key
 inoremap <C-x> <C-X><C-O>
+
+nmap > <C-W>>
+nmap < <C-W><

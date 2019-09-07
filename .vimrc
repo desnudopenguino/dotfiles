@@ -112,7 +112,7 @@ set relativenumber
 set number
 set ruler
 " transparent background
-hi Normal ctermbg=NONE
+"hi Normal ctermbg=NONE
 " 81st Coumn highlighting
 highlight ColorColumn ctermbg=238
 call matchadd('ColorColumn', '\%81v', 16)
@@ -217,4 +217,5 @@ inoremap <C-x> <C-X><C-O>
 nmap <Leader>. <C-W>>
 nmap <Leader>, <C-W><
 nmap <Leader>- <C-W>-
-nmap <leader>= <C-W>+
+nmap <leader>+ <C-W>+
+nmap <leader>= <C-W>=

@@ -3,7 +3,7 @@ export LANG="en_US.UTF-8"
 
 # change the cli line
 # export PS1='$(print -n "${PWD}\n$ ")'
-export PS1="\033[1;31m\u\033[1;37m@\033[1;33m\h\033[1;37m:\033[1;34m\w\033[0m\n\033[1;37m$\033[0m "
+export PS1="\033[1;32m\u\033[1;37m@\033[1;36m\h\033[1;37m:\033[1;34m\w\033[0m\n\033[1;37m$\033[0m "
 
 set -o vi
 
@@ -47,3 +47,9 @@ alias pls='doas $(fc -ln -1)'
 
 # alias for ifconfig
 alias ifconfig='doas ifconfig'
+
+# alias for my workout sheets
+alias workout='cd ~/.scratch&&vim note:workout'
+
+# alias vim fzf
+alias fzv='vim $(fzf)'

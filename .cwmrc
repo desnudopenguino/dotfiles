@@ -20,7 +20,8 @@ color urgencyborder '#ff4400'
 color ungroupborder '#ffcc00'
 command term urxvtc
 command lock "i3lock-blur"
-fontname "Hack:style=Bold,pixelsize=18"
+#fontname "Hack:style=Bold,pixelsize=18"
+fontname "Lotion:style=Regular,pixelsize=18"
 gap 20 20 550 20
 ignore Conky
 moveamount 10
@@ -30,7 +31,7 @@ sticky yes
 # Actions
 bind-key MC-r restart
 bind-key MC-q quit
-bind-key MC-Return "urxvtc" # bind terminal
+bind-key C-Return "urxvtc" # bind terminal
 bind-key MC-l lock
 bind-key MC-z "ZZZ"
 bind-key MC-s "scrot"

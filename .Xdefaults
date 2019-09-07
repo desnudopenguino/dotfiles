@@ -24,7 +24,7 @@ URxvt.matcher.button: 1
 rofi.lines: 5
 rofi.padding: 100
 rofi.hide-scrollbar: true
-rofi.font: Hack Bold 12
+rofi.font: Lotion Bold 12
 rofi.separator-style: solid
 rofi.color-enabled: true
 rofi.color-window: #282A36, #9AEDFE, #9AEDFE
@@ -37,28 +37,28 @@ rofi.run-shell-command: {terminal} -e '{cmd}'
 
 
 ! Dracula Xresources palette
-*.foreground: #F8F8F2
-*.background: #282A36
-*.color0:     #000000
-*.color8:     #4D4D4D
+*.foreground: #C6C6C6
+*.background: #262626
+*.color0:     #3A3A3A
+*.color8:     #626262
 ! red
-*.color1:     #FF5555
-*.color9:     #FF6E67
+*.color1:     #D78787
+*.color9:     #FFAFAF
 ! green
-*.color2:     #50FA7B
-*.color10:    #5AF78E
-! light yellow
-*.color3:     #F1FA8C
-*.color11:    #F4F99D
-! purple
-*.color4:     #BD93F9
-*.color12:    #CAA9FA
-! pink
-*.color5:     #FF79C6
-*.color13:    #FF92D0
+*.color2:     #87AF5F
+*.color10:    #AFD787
+! yellow
+*.color3:     #D7D7AF
+*.color11:    #D7D787
 ! blue
-*.color6:     #8BE9FD
-*.color14:    #9AEDFE
-! gray
-*.color7:     #BFBFBF
-*.color15:    #E6E6E6
+*.color4:     #87AFD7
+*.color12:    #87D7FF
+! magenta
+*.color5:     #AFAFD7
+*.color13:    #D7AFD7
+! cyan
+*.color6:     #87D7D7
+*.color14:    #5FD7D7
+! white
+*.color7:     #C6C6C6
+*.color15:    #EEEEEE

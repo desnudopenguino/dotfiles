@@ -27,16 +27,16 @@ rofi.hide-scrollbar: true
 rofi.font: Lotion Bold 12
 rofi.separator-style: solid
 rofi.color-enabled: true
-rofi.color-window: #282A36, #9AEDFE, #9AEDFE
-rofi.color-normal: #282A36, #BD93F9, #4D4D4D, #FF79C6, #282A36
-rofi.color-urgent: #282A36, #FF5555, #4D4D4D, #FF5555, #282A36
-rofi.color-active: #282A36, #F1FA8C, #4D4D4D, #F1FA8C, #282A36
+rofi.color-window: #262626, #C6C6C6, #C6C6C6
+rofi.color-normal: #262626, #87D7D7, #262626, #87AFD7, #262626
+rofi.color-urgent: #262626, #D78787, #262626, #FFAFAF, #262626
+rofi.color-active: #262626, #87AF5F, #262626, #AFD787, #262626
 rofi.border-width: 5
-rofi.terminal: xterm
+rofi.terminal: urxvtc
 rofi.run-shell-command: {terminal} -e '{cmd}'
 
 
-! Dracula Xresources palette
+! Corvine Xresources palette
 *.foreground: #C6C6C6
 *.background: #262626
 *.color0:     #3A3A3A

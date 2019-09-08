@@ -8,12 +8,12 @@ unbind-key all
 unbind-mouse all
 
 # Default variables
-borderwidth 5
-color activeborder  '#282A36'
+borderwidth 1
+color activeborder  '#87AFD7'
 color font          '#4477bb'
 color selfont       '#88bbff'
 color groupborder   '#44bb77'
-color inactiveborder'#292a36'
+color inactiveborder '#262626'
 color menubg        '#000000'
 color menufg        '#000000'
 color urgencyborder '#ff4400'
@@ -22,8 +22,7 @@ command term urxvtc
 command lock "i3lock-blur"
 #fontname "Hack:style=Bold,pixelsize=18"
 fontname "Lotion:style=Regular,pixelsize=18"
-gap 20 20 550 20
-ignore Conky
+gap 20 20 20 20
 moveamount 10
 snapdist 40
 sticky yes

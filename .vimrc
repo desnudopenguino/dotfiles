@@ -29,6 +29,7 @@ Plugin 'vim-syntastic/syntastic' " Syntastic syntax checker
 Plugin 'junegunn/fzf' " fzf in vim
 Plugin 'junegunn/fzf.vim' " fzf in vim
 Plugin 'arzg/vim-corvine' " another color theme
+Plugin 'jiangmiao/auto-pairs' " auto pairs for {}[](), etc
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -219,3 +220,6 @@ nmap <Leader>, <C-W><
 nmap <Leader>- <C-W>-
 nmap <leader>+ <C-W>+
 nmap <leader>= <C-W>=
+
+" term
+nmap <Leader>; :term<CR>

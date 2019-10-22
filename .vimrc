@@ -30,6 +30,7 @@ Plugin 'junegunn/fzf' " fzf in vim
 Plugin 'junegunn/fzf.vim' " fzf in vim
 Plugin 'arzg/vim-corvine' " another color theme
 Plugin 'jiangmiao/auto-pairs' " auto pairs for {}[](), etc
+Plugin 'kkoomen/vim-doge' "Document Generator
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -54,6 +55,8 @@ scriptencoding utf-8
 set ffs=unix,dos,mac
 " Auto indents the next line
 set autoindent
+" enable auto indent for php
+let b:PHP_default_indenting = 1
 " Backspace behavior
 set backspace=indent,eol,start
 " Show the status line
@@ -209,7 +212,7 @@ nmap <Leader>e :e!<CR>
 nmap <Leader>z ZZ<CR>
 
 " close html syntax
-inoremap <C-C> </<C-X><C-O>
+inoremap <C-C> </<C-X><C-O><Esc>o
 
 " auto complete single leader key
 inoremap <C-x> <C-X><C-O>

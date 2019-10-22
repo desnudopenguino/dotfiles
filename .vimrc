@@ -212,7 +212,9 @@ nmap <Leader>e :e!<CR>
 nmap <Leader>z ZZ<CR>
 
 " close html syntax
-inoremap <C-C> </<C-X><C-O><Esc>o
+inoremap <C-C> </<C-X><C-O><CR>
+" close html syntax, then move back to last > to insert
+inoremap <C-i> </<C-X><C-O><Esc>F>a
 
 " auto complete single leader key
 inoremap <C-x> <C-X><C-O>

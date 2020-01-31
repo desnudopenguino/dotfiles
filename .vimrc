@@ -31,6 +31,7 @@ Plugin 'junegunn/fzf.vim' " fzf in vim
 Plugin 'arzg/vim-corvine' " another color theme
 Plugin 'jiangmiao/auto-pairs' " auto pairs for {}[](), etc
 Plugin 'kkoomen/vim-doge' "Document Generator
+Plugin 'psliwka/vim-smoothie' " smooth scrolling
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -100,6 +101,9 @@ syntax on
 " show command
 set showcmd
 
+" turn on wrap on vimdiff
+au VimEnter * if &diff | execute 'windo set wrap' | endif
+
 " autocomplete
 filetype plugin on
 au FileType php,html,ctp setl ofu=phpcomplete#CompletePHP
@@ -115,6 +119,14 @@ endif
 set relativenumber
 set number
 set ruler
+
+" lazy redraw for faster macros
+set lazyredraw
+
+" searching made easier
+set smartcase
+set ignorecase
+
 " transparent background
 "hi Normal ctermbg=NONE
 " 81st Coumn highlighting
@@ -214,7 +226,7 @@ nmap <Leader>z ZZ<CR>
 " close html syntax
 inoremap <C-C> </<C-X><C-O><CR>
 " close html syntax, then move back to last > to insert
-inoremap <C-i> </<C-X><C-O><Esc>F>a
+"inoremap <C-i> </<C-X><C-O><Esc>F>a
 
 " auto complete single leader key
 inoremap <C-x> <C-X><C-O>

@@ -48,7 +48,9 @@ let g:netrw_liststyle = 3
 let g:netrw_banner = 1
 " Set font
 set guifont=Hack\ 15
-" UTF-8
+" paste
+set pastetoggle=<F2>
+"UTF-8
 set encoding=utf-8
 set fileencoding=utf-8
 scriptencoding utf-8

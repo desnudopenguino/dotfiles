@@ -19,7 +19,7 @@ color menufg        '#000000'
 color urgencyborder '#ff4400'
 color ungroupborder '#ffcc00'
 command term urxvtc
-command lock "i3lock-blur"
+command lock "slock"
 #fontname "Hack:style=Bold,pixelsize=18"
 fontname "Lotion:style=Regular,pixelsize=18"
 gap 20 20 20 20

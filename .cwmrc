@@ -9,8 +9,8 @@ unbind-mouse all
 
 # Default variables
 borderwidth 1
-color activeborder  '#87AFD7'
-color font          '#4477bb'
+color activeborder  '#C6C6C6'
+color font          '#C6C6C6'
 color selfont       '#88bbff'
 color groupborder   '#44bb77'
 color inactiveborder '#262626'
@@ -18,11 +18,10 @@ color menubg        '#000000'
 color menufg        '#000000'
 color urgencyborder '#ff4400'
 color ungroupborder '#ffcc00'
-command term urxvtc
+command term "urxvtc"
 command lock "slock"
-#fontname "Hack:style=Bold,pixelsize=18"
-fontname "Lotion:style=Regular,pixelsize=18"
-gap 20 20 20 20
+fontname "Hack:style=Regular,pixelsize=18"
+gap 40 5 5 5
 moveamount 10
 snapdist 40
 sticky yes
@@ -30,12 +29,11 @@ sticky yes
 # Actions
 bind-key MC-r restart
 bind-key MC-q quit
-bind-key C-Return "urxvtc" # bind terminal
+bind-key C-F "firefox"
+bind-key C-Return "urxvtc"
 bind-key MC-l lock
 bind-key MC-z "ZZZ"
 bind-key MC-s "scrot"
-bind-key MC-a "xset r"
-bind-key MC-o "xset -r"
 bind-key M-r "rofi -show run"
 bind-key M-d "rofi -show drun"
 bind-key M-k "rofi -show keys"
@@ -127,26 +125,10 @@ bind-mouse M-3 window-resize
 bind-mouse M-2 window-window-group
 
 # Enable/disable mouse
-bind-key M-z toggletouch
 
 #
 # auto groups
 #
-
-# group 2 browsers
-autogroup 2 "Firefox"
-autogroup 2 "qutebrowser"
-
-# group 3: Office stuff
-autogroup 3 "libreoffice-startcenter"
-autogroup 3 "win","Xpdf"
-autogroup 3 "okular","Okular"
-
-# group 4 image processing
-autogroup 4 "Gimp"
-autogroup 4 "Inkscape"
-autogroup 4 "Darktable"
-autogroup 4 "Blender"
 
 # group 5 rdp
 autogroup 5 "xfreerdp"

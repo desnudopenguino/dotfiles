@@ -1,9 +1,11 @@
 # allow for the powerline icons
 export LANG="en_US.UTF-8"
 
+export WWW_HOME=https://ddg.co
+
 # change the cli line
 # export PS1='$(print -n "${PWD}\n$ ")'
-export PS1="\033[1;32m\u\033[1;37m@\033[1;36m\h\033[1;37m:\033[1;34m\w\033[0m\n\033[1;37m$\033[0m "
+export PS1="\033[1;37m\u@\h:\w\n$\033[0m "
 
 set -o vi
 
